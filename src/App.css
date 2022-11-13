@@ -2,6 +2,7 @@ body{
       padding: 0;
       margin: 0;
       font-family: "lato", sans-serif;
+      background-color:#dfe5ee;
 }
 
 #makescrren{
@@ -27,7 +28,7 @@ body{
       -ms-user-select: none;
     }
 .navbar_color{
-      background-color: #0e54a3;
+      background-color: #043d78;
 }
 .header_text{
       font-size: 28px;
@@ -52,5 +53,18 @@ body{
       position: fixed;
        bottom: 0px;
         right: 0px;
-        background-color: #0e54a3; 
+        background-color: #043d78; 
+}
+
+.box{
+      width: 70%;
+      height: 50vh;
+      background-color: white;
+      padding: 10px;
+      margin: 0px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px #043d78;
 }
