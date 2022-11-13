@@ -4,14 +4,15 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 import InfoIcon from '@mui/icons-material/Info';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
+import { Link } from "react-scroll";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar_color">
+      <nav className="navbar navbar-expand-lg navbar_color sticky-top">
         <div className="container-fluid ">
-          <a className="navbar-brand text-white header_text" href="/">
+          <Link className="navbar-brand text-white header_text" href="/">
             Narayana hospital
-          </a>
+          </Link>
           <button
             className="navbar-toggler "
             type="button "
@@ -25,16 +26,16 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <Link className="nav-item"  to="Home" smooth={true}  style={{textDecoration: 'none'}}>
                 <a className="nav-link  text-white active header_text1" aria-current="page" href="/">
                 <ApartmentIcon/>  Home
                 </a>
-              </li>
-              <li className="nav-item">
+              </Link>
+              <Link className="nav-item" to="Testimonials" smooth={true}  style={{textDecoration: 'none'}} >
                 <a className="nav-link  text-white header_text1" href="/">
                 <ReviewsIcon/> Testimonials
                 </a>
-              </li>
+              </Link>
                <li className="nav-item">
                 <a className="nav-link  text-white header_text1" href="/">
                <InfoIcon/> About us
@@ -48,11 +49,12 @@ const Navbar = () => {
               
             </ul>
             <div className="d-flex">
-              <button className="btn bg-white" type="submit" style={{ 
+              <Link className="btn bg-white" type="submit" to="contact" smooth={true}  style={{ 
                 color: "black",
+                textDecoration: 'none'
               }} >
-             <ContactPageIcon/> Contact us
-              </button>
+              <ContactPageIcon/> Contact us
+              </Link>
             </div>
           </div>
         </div>

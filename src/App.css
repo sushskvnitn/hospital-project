@@ -20,7 +20,6 @@ body{
       object-fit: cover;
       height:50vh;
       z-index:-1;
-      /* user-drag: none;   */
       user-select: none;
       -moz-user-select: none;
       -webkit-user-drag: none;

@@ -6,7 +6,7 @@ const Testimonials = () => {
       <section className="Testimonials">
   <div class="row d-flex justify-content-center">
     <div class="col-md-10 col-xl-8 text-center">
-      <h3 class="mb-4">Testimonials</h3>
+      <h3 class="mb-4" id="Testimonials" >Testimonials</h3>
       <p class="mb-4 pb-2 mb-md-5 pb-md-0">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
         numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
