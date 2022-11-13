@@ -7,15 +7,16 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import LoginIcon from "@mui/icons-material/Login";
 import { Link as Linker } from "react-scroll";
+import {  Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar_color sticky-top">
         <div className="container-fluid ">
-          <Linker className="navbar-brand text-white header_text" href="/">
+          <Link className="navbar-brand text-white header_text" to="/">
             Narayana hospital
-          </Linker>
+          </Link>
           <button
             className="navbar-toggler "
             type="button "
@@ -35,13 +36,13 @@ const Navbar = () => {
                 smooth={true}
                 style={{ textDecoration: "none" }}
               >
-                <a
+                <Link
                   className="nav-link  text-white active header_text1"
                   aria-current="page"
                   href="/"
                 >
                   <ApartmentIcon /> Home
-                </a>
+                </Link>
               </Linker>
               <Linker
                 className="nav-item"
@@ -68,14 +69,14 @@ const Navbar = () => {
                 </a>
               </Linker>
               <li className="nav-item">
-                <a className="nav-link  text-white header_text1" href="/about">
+                <Link className="nav-link  text-white header_text1" to="/about">
                   <InfoIcon /> About us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link  text-white header_text1" href="/gallery">
+                <Link className="nav-link  text-white header_text1" to="/gallery">
                   <CollectionsIcon /> Gallery
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="d-flex">
@@ -93,9 +94,9 @@ const Navbar = () => {
               </Linker>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link  text-white header_text1" href="/">
+                  <Link className="nav-link  text-white header_text1" to="/login">
                     <LoginIcon /> 
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
