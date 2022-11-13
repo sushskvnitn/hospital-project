@@ -10,26 +10,26 @@ const Footer = () => {
   <div className="container p-4 pb-0">
     <section className="mb-4">
       <a
-        className="btn text-white  mx-4"
+        className="btn text-white  mx-3"
         style={{backgroundColor: "#3b5998"}}
         href="#!"
         role="button"
         ><FacebookIcon/></a>
       <a
-        className="btn text-white  mx-4"
+        className="btn text-white  mx-3"
         style={{backgroundColor: "#55acee"}}
         href="#!"
         role="button"
         ><TwitterIcon/></a>
 
       <a
-        className="btn text-white  mx-4"
+        className="btn text-white  mx-3"
         style={{backgroundColor: "#dd4b39"}}
         href="#!"
         role="button"
         ><GoogleIcon/></a>
       <a
-        className="btn text-white  mx-4 "
+        className="btn text-white  mx-3 "
         style={{backgroundColor: "#ac2bac"}}
         href="#!"
         role="button"
@@ -37,7 +37,7 @@ const Footer = () => {
     </section>
   </div>
 
-  <div className="text-center p-3 text-dark" style={{backgroundColor: "rgba(0, 0, 0, 0.2);"}}>
+  <div className="text-center p-3 text-dark" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
     © 2022 Copyright:
     <a className="text-dark" href="https://hospitalpro.netlify.app/">hospitalpro.netlify.app</a>
   </div>
