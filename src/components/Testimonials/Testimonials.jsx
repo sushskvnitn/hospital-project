@@ -15,7 +15,7 @@ const Testimonials = () => {
     </div>
   </div>
    
-  <div class="row text-center"> 
+  <div class="row text-center  d-flex justify-content-center"> 
     <Card rate="3" name="Lorem, ipsum." job="doctor" image="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in rerum alias?" />
     <Card rate="3" name="Lorem, ipsum." job="doctor" image="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in rerum alias?" />
     <Card rate="3" name="Lorem, ipsum." job="doctor" image="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in rerum alias?" />

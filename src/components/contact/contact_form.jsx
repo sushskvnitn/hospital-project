@@ -34,7 +34,7 @@ const contact_form = () => {
                       </div>
                     </div>
                     <div className="col-lg-12 my-4">
-                      <button className="btn btn-danger">submit now</button>
+                      <button className="btn text-white" style={{ backgroundColor: "#0e54a3" }} >submit now</button>
                     </div>
                   </div>
                 </form>

@@ -4,6 +4,7 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 import InfoIcon from '@mui/icons-material/Info';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 import { Link } from "react-scroll";
 const Navbar = () => {
   return (
@@ -29,6 +30,11 @@ const Navbar = () => {
               <Link className="nav-item"  to="Home" smooth={true}  style={{textDecoration: 'none'}}>
                 <a className="nav-link  text-white active header_text1" aria-current="page" href="/">
                 <ApartmentIcon/>  Home
+                </a>
+              </Link> 
+              <Link className="nav-item"  to="updates" smooth={true}  style={{textDecoration: 'none'}}>
+                <a className="nav-link  text-white active header_text1" aria-current="page" href="/">
+                <TipsAndUpdatesIcon/>  Updates
                 </a>
               </Link>
               <Link className="nav-item" to="Testimonials" smooth={true}  style={{textDecoration: 'none'}} >
