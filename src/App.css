@@ -1,6 +1,7 @@
 body{
       padding: 0;
       margin: 0;
+      
 }
 
 #makescrren{
@@ -13,10 +14,12 @@ body{
       
     }
 .hospital_animation{
+      position:absolute;
       opacity:90%;
       width:100%;
+      object-fit: cover;
       height:50vh;
-      z-index: -1; 
+      z-index:-1;
       /* user-drag: none;   */
       user-select: none;
       -moz-user-select: none;
@@ -39,4 +42,16 @@ body{
       font-size: 18px;
       color: white;
       margin: 10px;
+}
+.Testimonials{
+      overflow: hidden;
+}
+.map{
+      overflow: hidden;
+}
+.button_bottom{
+      position: fixed;
+       bottom: 0px;
+        right: 0px;
+        background-color: #0e54a3; 
 }
