@@ -28,6 +28,10 @@ const Gallary = () => {
         title="Image 2"
          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
          date="2021-10-11" />
+        <Gallarycard imagesrc="https://thumbs.dreamstime.com/b/doctors-hospital-corridor-nurse-pushing-gurney-stretcher-bed-male-senior-female-patient-32154012.jpg"
+        title="Image 2"
+         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+         date="2021-10-11" />
       </div>
     </div>
   );

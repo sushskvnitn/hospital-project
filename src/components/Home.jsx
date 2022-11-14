@@ -9,6 +9,7 @@ const Home = () => {
     </div>
     <div style={{marginTop:"35vh" ,zIndex:"1" }}>
       <h1 className="text-center " style={{ color: "#043d78" }}>Narayana Hospital</h1>
+      <h3 className="text-center " >Lorem ipsum dolor sit amet.</h3>
       <p className="fs-5 text-center"> location : Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in porro recusandae? </p>
     </div>
       

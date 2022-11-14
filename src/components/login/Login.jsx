@@ -5,6 +5,7 @@ const Login = () => {
   return (
     <>
      <Link className="btn navbar_color text-white mx-4 my-2" to="/" > <ArrowBackIcon/> </Link>
+     <h1 className="text-center "> Login</h1> 
     <div className=" d-flex justify-content-center ">
       
       <section className="vh-50 w-50 bg-white login_box">
@@ -23,7 +24,7 @@ const Login = () => {
                   <input
                     type="email"
                     id="form3Example3"
-                    className="form-control form-control-lg"
+                    className="form-control form-control-lg border border-primary"
                     placeholder="Enter a valid email address"
                   />
                   <label className="form-label" for="form3Example3">
@@ -35,7 +36,7 @@ const Login = () => {
                   <input
                     type="password"
                     id="form3Example4"
-                    className="form-control form-control-lg"
+                    className="form-control form-control-lg border border-primary"
                     placeholder="Enter password"
                   />
                   <label className="form-label" for="form3Example4">
@@ -45,7 +46,7 @@ const Login = () => {
                 <div className="text-center text-lg-start mt-4 pt-2">
                   <button
                     type="button"
-                    className="btn btn-primary "
+                    className="btn dark_blue text-white "
                   >
                     Login
                   </button>
