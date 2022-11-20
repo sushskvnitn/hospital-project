@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8000;
 
 require("./schema/userschema");
 require('./db/connect');
-
+app.use("/public", express.static('public'));
 app.use(express.json());
 app.use(require("./router/auth"));
 

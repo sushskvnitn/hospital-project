@@ -1,5 +1,8 @@
 import React from 'react'
 import Card from './card'
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import {  Link } from "react-router-dom"
 const Testimonials = () => {
   return (
     <>
@@ -24,6 +27,11 @@ const Testimonials = () => {
     <Card rate="3" name="Lorem, ipsum." job="doctor" image="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in rerum alias?" />
 
   </div>
+  <div className="d-flex justify-content-center p-3 m-3" >
+  <div className="btn-group " style={{width:"19rem"}} role="group" aria-label="Basic example">
+  <Link type="button" className="btn  dark_blue text-white" to="/addmessage"> <AddCircleIcon/>  add review</Link>
+  <button type="button" className="btn btn-warning"> <ReadMoreIcon/>  read more</button>
+</div></div>
 </section>
     </>
   )

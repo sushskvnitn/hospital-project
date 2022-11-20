@@ -3,8 +3,8 @@ const router = express.Router();
 const app = express();
 app.use(express.json());
 const bcrypt = require("bcrypt");
-const {Doctor , Gallery  }  = require("../schema/userschema");
-
+const {Doctor , Gallery , Review }  = require("../schema/userschema");
+const multer = require("multer");
 router.get("/doctors", (req, res) => {
     try {
         Doctor.find({}, (err, doctors) => {
@@ -17,6 +17,7 @@ router.get("/doctors", (req, res) => {
         console.log(err);
     } 
 });
+
 
 router.get("/signup", (req, res) => {
   res.send("hello world from signup");
@@ -74,8 +75,59 @@ if ( !name ||!email  || !password) {
     console.log(error);
   }
 })
-router.post('/addphoto', async(req, res) => {
+const storage = multer.diskStorage({  
+  destination: function (req, file, cb) {
+    cb(null, 'public/images');
+  },
+  filename: function (req, file, cb) { 
+    cb(null,  Date.now()+file.originalname);
+  }
+})
+const upload = multer({ storage })
+
+router.post('/addphoto',upload.single('Name') ,async (req, res) => {
+  let photo = (req.file) ? req.file.filename : null;
+  const { title, caption} = req.body;
+  if ( !title || !caption ) {
+    res.status(400).json({ msg: "Please fill all the fields" });
+  }
+  try {
+    const data = new Gallery({
+      photo,
+      title,
+      caption,
+    });
+    console.log(data);
+    const res = await data.save();
+    res.json({ success: "image uploaded successfully" });
+
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.post('/addmessage',upload.single('Image') ,async (req, res) => {
+  let photo = (req.file) ? req.file.filename : null;
+  const { occupation, review, name, rating} = req.body;
   console.log(req.body);
+  if ( !occupation || !review || !name || !rating ) {
+    res.status(400).json({ msg: "Please fill all the fields" });
+  }
+  try {
+    const data1 = new Review({
+      photo,
+      occupation,
+      review,
+      name,
+      rating,
+    });
+    console.log(data1);
+    const res = await data1.save();
+    res.status(200).json({ success: "message added successfully" });
+
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get('/gallery',async (req, res) => {

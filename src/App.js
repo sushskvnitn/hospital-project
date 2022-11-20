@@ -6,11 +6,13 @@ import Aboutus from './components/about/about';
 import Gallery from './components/gallery/Gallery';
 import CallIcon from '@mui/icons-material/Call';
 import Login from './components/login/Login';
+import Addmessage from './components/doctorhandle/addmessage';
 import DoctorHandle from './components/doctorhandle/doctorhandle';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
   return <BrowserRouter> 
    <Navbar/> 
+   
    <Routes>
       <Route path="/" element={<Homepage/>}/>
     </Routes>
@@ -25,6 +27,9 @@ function App() {
     </Routes>
     <Routes>
       <Route path="/doctorhandle" element={<DoctorHandle/>}/>
+    </Routes>
+    <Routes>
+      <Route path="/addmessage" element={<Addmessage/>}/>
     </Routes>
     <Footer/>
       <div className=" navbar_color mx-4 shadow">

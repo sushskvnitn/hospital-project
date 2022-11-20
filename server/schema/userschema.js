@@ -22,13 +22,19 @@ const DoctorSchema = new mongoose.Schema({
 });
 
 const GallerySchema = new mongoose.Schema({
-      caption: {
-            type: String ,
+     
+      photo: {
+            type: String,
             required: true,
       },
-      photo: {
-            data: Buffer,
-            contentType: String,
+      title:
+      {
+            type: String,
+            required: true,
+      },
+       caption: {
+            type: String ,
+            required: true,
       },
       date: {
             type: Date,
@@ -37,6 +43,30 @@ const GallerySchema = new mongoose.Schema({
       }
 });
 
+const ReviewSchema = new mongoose.Schema({
+     
+      photo: {
+            type: String,
+            required: true,
+      },
+      occupation:
+      {
+            type: String,
+            required: true,
+      },
+       review: {
+            type: String ,
+            required: true,
+      },
+      name: {
+            type: String,
+            required: true,
+      },
+      rating: {
+            type: Number ,
+            required: true,
+      }
+});
 
 
 // Hashing the password
@@ -50,9 +80,10 @@ DoctorSchema.pre("save", async function (next) {
 
 const Doctor = mongoose.model("DOCTOR", DoctorSchema);
 const Gallery = mongoose.model("GALLERY", GallerySchema);
+const Review = mongoose.model("REVIEW", ReviewSchema);
 
 module.exports = {
       Doctor,
-      Gallery
+      Gallery,Review
 };
 

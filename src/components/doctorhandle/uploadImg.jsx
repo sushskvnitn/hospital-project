@@ -10,22 +10,24 @@ const UploadImg = () => {
   const onsubmit = async (event) => {
     event.preventDefault();
     const data = new FormData();
-    data.append("file", file);
-    data.append("gallarytitle", gallarytitle);
-    data.append("description", description);
+    data.append("Name", file);
+    data.append("title", gallarytitle);
+    data.append("caption", description);
     try {
-      let response = await axios.post("/addphoto",data)
+     let response = await axios.post("/addphoto", data);
+      console.log(response);
+
       if (response.status === 200) {
-        console.log("success");
+        alert("uploaded successfully");
       }
-      
+
     } catch (error) {
-      console.error(error)
+      console.error(error+"error");
     }
   }
   return (
     <div className=" m-4 my-4 w-50 " >
-      <form>
+      <form action="/addphoto" method="post" encType="multipart/form-data" >
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
           image title
@@ -55,6 +57,7 @@ const UploadImg = () => {
           type="file"
           className="form-control"
           id="inputGroupFile02"
+          name="Name"
           onChange={uploadimg}
         />
         <label className="input-group-text" htmlFor="inputGroupFile02">
