@@ -1,7 +1,10 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 const card = (props) => {
+  AOS.init();
   return (
     <>
       <div
@@ -9,6 +12,9 @@ const card = (props) => {
         style={{
           width: "18rem",
         }}
+        data-aos="flip-left"
+        data-aos-duration="2000"
+
       >
         <div className="d-flex justify-content-center mb-4">
           <img

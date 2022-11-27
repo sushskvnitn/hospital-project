@@ -3,10 +3,13 @@ import Card from './card'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import {  Link } from "react-router-dom"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Testimonials = () => {
+  AOS.init();
   return (
     <>
-      <section className="Testimonials my-2">
+      <section className="Testimonials my-2" data-aos="fade-right" data-aos-duration="1000">
   <div className="row d-flex justify-content-center">
     <div className="col-md-10 col-xl-8 text-center">
     <br />
