@@ -6,6 +6,7 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import LoginIcon from "@mui/icons-material/Login";
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
 import Photo from "../images/logo2.png"
@@ -77,6 +78,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link   header_text1" to="/gallery">
                   <CollectionsIcon /> Gallery
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link   header_text1" to="/services">
+                  <MedicalServicesIcon /> Services
                 </Link>
               </li>
             </ul>

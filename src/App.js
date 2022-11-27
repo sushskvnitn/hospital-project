@@ -6,6 +6,7 @@ import Aboutus from './components/about/about';
 import Gallery from './components/gallery/Gallery';
 import CallIcon from '@mui/icons-material/Call';
 import Login from './components/login/Login';
+import Services from './components/services/services';
 import Addmessage from './components/doctorhandle/addmessage';
 import DoctorHandle from './components/doctorhandle/doctorhandle';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
@@ -30,6 +31,9 @@ function App() {
     </Routes>
     <Routes>
       <Route path="/addmessage" element={<Addmessage/>}/>
+    </Routes>
+    <Routes>
+      <Route path="/services" element={<Services/>}/>
     </Routes>
     <Footer/>
       <div className=" navbar_color mx-4 shadow">
