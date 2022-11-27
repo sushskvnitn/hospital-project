@@ -30,7 +30,11 @@ body{
       -ms-user-select: none;
     }
 .navbar_color{
-      background-color: #043d78;
+      background-color: #f7f7f8;
+      
+}
+.navbarcss{
+      padding-top: -100px;
 }
 .dark_blue{
       background-color: #043d78;
@@ -42,7 +46,7 @@ body{
 }
 .header_text{
       font-size: 28px;
-      color: white;
+      color: #043d78;
       font-weight: bold;
       text-align: center;
       padding: 10px;
@@ -50,9 +54,10 @@ body{
 }
 .header_text1{
       font-size: 18px;
-      color: white;
+      color: #043d78;
       margin-left: 10px;
 }
+
 .Testimonials{
       overflow: hidden;
 }

@@ -8,14 +8,15 @@ import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import LoginIcon from "@mui/icons-material/Login";
 import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
+import Photo from "../images/logo2.png"
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar_color sticky-top">
+      <nav className="navbar navbar-expand-lg navbar_color sticky-top  " >
         <div className="container-fluid ">
-          <Link className="navbar-brand text-white header_text" to="/">
-            Narayana hospital
+          <Link className="navbar-brand  header_text" to="/">
+            <img width="80" height="50" className="d-inline-block align-top " src={Photo} alt="" srcset="" />
           </Link>
           <button
             className="navbar-toggler "
@@ -37,7 +38,7 @@ const Navbar = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Link
-                  className="nav-link  text-white active header_text1"
+                  className="nav-link  header_text1"
                   aria-current="page"
                   href="/"
                 >
@@ -51,7 +52,7 @@ const Navbar = () => {
                 style={{ textDecoration: "none" }}
               >
                 <a
-                  className="nav-link  text-white active header_text1"
+                  className="nav-link header_text1"
                   aria-current="page"
                   href="/"
                 >
@@ -64,17 +65,17 @@ const Navbar = () => {
                 smooth={true}
                 style={{ textDecoration: "none" }}
               >
-                <a className="nav-link  text-white header_text1" href="/">
+                <a className="nav-link   header_text1" href="/">
                   <ReviewsIcon /> Testimonials
                 </a>
               </Linker>
               <li className="nav-item">
-                <Link className="nav-link  text-white header_text1" to="/about">
+                <Link className="nav-link   header_text1" to="/about">
                   <InfoIcon /> About us
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link  text-white header_text1" to="/gallery">
+                <Link className="nav-link   header_text1" to="/gallery">
                   <CollectionsIcon /> Gallery
                 </Link>
               </li>
@@ -94,7 +95,7 @@ const Navbar = () => {
               </Linker>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link  text-white header_text1" to="/login">
+                  <Link className="nav-link   header_text1" to="/login">
                     <LoginIcon /> 
                   </Link>
                 </li>
