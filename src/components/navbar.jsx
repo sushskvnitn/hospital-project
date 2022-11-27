@@ -10,6 +10,7 @@ import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
 import Photo from "../images/logo2.png"
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 const Navbar = () => {
   return (
@@ -69,10 +70,15 @@ const Navbar = () => {
                 <a className="nav-link   header_text1" href="/">
                   <ReviewsIcon /> Testimonials
                 </a>
-              </Linker>
+              </Linker> 
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/about">
-                  <InfoIcon /> About us
+                <Link className="nav-link   header_text1" to="/services">
+                  <MedicalServicesIcon /> Services
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link   header_text1" to="/doctors">
+                  <PersonAddIcon /> Meet Our Professionals
                 </Link>
               </li>
               <li className="nav-item">
@@ -81,10 +87,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/services">
-                  <MedicalServicesIcon /> Services
+                <Link className="nav-link   header_text1" to="/about">
+                  <InfoIcon /> About us
                 </Link>
               </li>
+              
+             
             </ul>
             <div className="d-flex">
               <Linker

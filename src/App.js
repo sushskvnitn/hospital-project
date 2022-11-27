@@ -9,6 +9,7 @@ import Login from './components/login/Login';
 import Services from './components/services/services';
 import Addmessage from './components/doctorhandle/addmessage';
 import DoctorHandle from './components/doctorhandle/doctorhandle';
+import Doctors from './components/doctors/doctors';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
   return <BrowserRouter> 
@@ -31,6 +32,9 @@ function App() {
     </Routes>
     <Routes>
       <Route path="/addmessage" element={<Addmessage/>}/>
+    </Routes>
+    <Routes>
+      <Route path="/doctors" element={<Doctors/>}/>
     </Routes>
     <Routes>
       <Route path="/services" element={<Services/>}/>
