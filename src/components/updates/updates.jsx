@@ -13,7 +13,7 @@ const updates = () => {
         Updates
       </h3>
       <div className="d-flex justify-content-center">
-        <div className="box"></div>
+        <div className="box"  data-aos-duration="1500" data-aos="zoom-in" ></div>
       </div>
     </>
   );
