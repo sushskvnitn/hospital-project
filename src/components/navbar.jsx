@@ -43,6 +43,8 @@ const Navbar = () => {
                   className="nav-link  header_text1"
                   aria-current="page"
                   href="/"
+                  data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
                 >
                   <ApartmentIcon /> Home
                 </Link>
@@ -57,6 +59,8 @@ const Navbar = () => {
                   className="nav-link header_text1"
                   aria-current="page"
                   href="/"
+                  data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
                 >
                   <TipsAndUpdatesIcon /> Updates
                 </a>
@@ -67,7 +71,8 @@ const Navbar = () => {
                 smooth={true}
                 style={{ textDecoration: "none" }}
               >
-                <a className="nav-link   header_text1" href="/">
+                <a className="nav-link   header_text1" href="/" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" >
                   <ReviewsIcon /> Testimonials
                 </a>
               </Linker> 
@@ -77,12 +82,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/doctors">
+                <Link className="nav-link   header_text1" to="/doctors" >
                   <PersonAddIcon /> Meet Our Professionals
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/gallery">
+                <Link className="nav-link   header_text1" to="/gallery" >
                   <CollectionsIcon /> Gallery
                 </Link>
               </li>
@@ -96,12 +101,11 @@ const Navbar = () => {
             </ul>
             <div className="d-flex">
               <Linker
-                className="btn bg-white"
+                className="btn bg-white header_text1"
                 type="submit"
                 to="contact"
                 smooth={true}
                 style={{
-                  color: "black",
                   textDecoration: "none",
                 }}
               >

@@ -2,7 +2,10 @@ import React from 'react'
 
 const Doctors = () => {
   return (
-    <div>Doctors</div>
+    <>
+    <h1 className="text-center "> Meet Our Professionals </h1>
+
+    </>
   )
 }
 
