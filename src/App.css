@@ -98,3 +98,24 @@ body{
       border-radius: 10px;
       box-shadow: 0px 0px 10px 0px #043d78;
 }
+
+
+/* [1] The container */
+.img-hover-zoom {
+     /* height: 300px; [1.1] Set it as per your need*/
+      overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+    }
+    
+   
+
+    .img-hover-zoom--brightness img {
+      transition: transform 2s, filter 1.5s ease-in-out;
+      transform-origin: center center;
+      filter: brightness(90%);
+    }
+    
+    /* The Transformation */
+    .img-hover-zoom--brightness:hover img {
+      filter: brightness(100%);
+      transform: scale(1.3);
+    }    
