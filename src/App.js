@@ -10,6 +10,7 @@ import Services from './components/services/services';
 import Addmessage from './components/doctorhandle/addmessage';
 import DoctorHandle from './components/doctorhandle/doctorhandle';
 import Doctors from './components/doctors/doctors';
+import DoctorDetails from './components/doctors/doctorpage';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
   return <BrowserRouter> 
@@ -38,6 +39,9 @@ function App() {
     </Routes>
     <Routes>
       <Route path="/services" element={<Services/>}/>
+    </Routes>
+    <Routes>
+      <Route path="/doctorscard" element={<DoctorDetails/>}/>
     </Routes>
     <Footer/>
       <div className=" navbar_color mx-4 shadow">

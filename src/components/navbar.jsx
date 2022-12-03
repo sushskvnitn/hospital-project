@@ -18,7 +18,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar_color sticky-top  " >
         <div className="container-fluid ">
           <Link className="navbar-brand  header_text" to="/">
-            <img width="80" height="50" className="d-inline-block align-top " src={Photo} alt="" srcset="" />
+            <img width="80" height="50" className="d-inline-block align-top " src={Photo} alt="" srcSet="" />
           </Link>
           <button
             className="navbar-toggler "

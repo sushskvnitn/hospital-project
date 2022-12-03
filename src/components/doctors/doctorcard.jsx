@@ -1,9 +1,12 @@
 import React from 'react'
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-const opendetails = () => {
-      console.log("clicked")
-}
+import {useNavigate} from 'react-router-dom'
+
 const DoctorCard = (props) => {
+  const navigate = useNavigate()
+  const opendetails = () => {
+    navigate('/doctorscard/', {state: {name: props.name, desc: props.desc, qualification: props.qualification, studylocation: props.studylocation}})
+  }
   return (
     <div className=" m-3">
       <div className="card">
@@ -17,7 +20,7 @@ const DoctorCard = (props) => {
     <h4 className="card-title strong">{props.name}</h4>
     <p className="card-text">  { props.desc }</p>
     <div className="d-flex justify-content-end">
-    <a href="#!" className="btn" onClick={opendetails}  ><DoubleArrowIcon/></a>
+    <button  className="btn" onClick={opendetails}  >know more<DoubleArrowIcon/></button>
     </div>
   </div>
 </div>
