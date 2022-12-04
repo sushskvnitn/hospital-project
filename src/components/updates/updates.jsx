@@ -1,6 +1,7 @@
 import React from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Ticker from "./Ticker";
 const updates = () => {
   AOS.init();
   return (
@@ -13,7 +14,11 @@ const updates = () => {
         Updates
       </h3>
       <div className="d-flex justify-content-center">
-        <div className="box"  data-aos-duration="1500" data-aos="zoom-in" ></div>
+        <div className="box"  data-aos-duration="1500" data-aos="zoom-in" >
+          <Ticker update="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum fuga veniam veritatis?" />
+          <Ticker update="Lorem, ipsum dolor sitt. Aliquam nostrum fuga veniam veritatis?" />
+          <Ticker update="Lorem, ipsum dolor sit amet consectetu nostrum fuga veniam veritatis?" />
+        </div>
       </div>
     </>
   );

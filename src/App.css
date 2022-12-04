@@ -126,3 +126,62 @@ body{
     .blue_color{
       color:#225a97;
     }
+
+    @-webkit-keyframes ticker {
+      0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+      100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+    @keyframes ticker {
+      0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+      100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+    .ticker-wrap {
+      /* position: fixed; */
+      top: 0;
+      width: 102%;
+      border-radius: 2%;
+      margin-left:-10px;
+      overflow: hidden;
+      height: 2rem;
+      background-color: rgba(196, 180, 180, 0.9);
+      padding-left: 100%;
+      margin-bottom: 1px;
+    }
+    
+    .ticker {
+      display: inline-block;
+      height: 2rem;
+      line-height: 2rem;
+      white-space: nowrap;
+      padding-right: 100%;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-name: ticker;
+      animation-name: ticker;
+      -webkit-animation-duration: 30s;
+      animation-duration: 30s;
+    }
+    .ticker_item {
+      display: inline-block;
+      padding: 0 2rem;
+      font-size: 1rem;
+      color: rgb(255, 255, 255);
+    }
+    
+    
