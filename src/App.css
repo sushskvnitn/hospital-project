@@ -31,10 +31,17 @@ body{
     }
 .navbar_color{
       background-color: #f7f7f8;
+      margin-top:-40px
       
 }
 .navbarcss{
       padding-top: -100px;
+}
+.contactuscss{
+  background-color: #d2145a
+}
+.contactuscss:hover{
+  background-color:black;
 }
 .dark_blue{
       background-color: #043d78;
@@ -53,7 +60,7 @@ body{
       margin: 0px;
 }
 .header_text1{
-      font-size: 18px;
+      font-size: 15px;
       color: #043d78;
       margin-left: 10px;
 }

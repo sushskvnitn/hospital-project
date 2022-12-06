@@ -1,17 +1,18 @@
 import React from "react";
 import ApartmentIcon from "@mui/icons-material/Apartment";
-import ReviewsIcon from "@mui/icons-material/Reviews";
+// import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
-import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
+// import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import LoginIcon from "@mui/icons-material/Login";
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
-import { Link as Linker } from "react-scroll";
+// import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
 import Photo from "../images/logo2.png"
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
-
+import VaccinesIcon from '@mui/icons-material/Vaccines';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 const Navbar = () => {
   return (
     <>
@@ -33,52 +34,36 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <Linker
+              <div
                 className="nav-item"
                 to="Home"
                 smooth={true}
                 style={{ textDecoration: "none" }}
               >
-                <Link
-                  className="nav-link  header_text1"
-                  aria-current="page"
-                  href="/"
-                  data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-                >
+               
+                <Link className="nav-link   header_text1"  to="/">
                   <ApartmentIcon /> Home
                 </Link>
-              </Linker>
-              <Linker
-                className="nav-item"
-                to="updates"
-                smooth={true}
-                style={{ textDecoration: "none" }}
-              >
-                <a
-                  className="nav-link header_text1"
-                  aria-current="page"
-                  href="/"
-                  data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-                >
-                  <TipsAndUpdatesIcon /> Updates
-                </a>
-              </Linker>
-              <Linker
-                className="nav-item"
-                to="Testimonials"
-                smooth={true}
-                style={{ textDecoration: "none" }}
-              >
-                <a className="nav-link   header_text1" href="/" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" >
-                  <ReviewsIcon /> Testimonials
-                </a>
-              </Linker> 
+              </div> 
+              <li className="nav-item">
+                <Link className="nav-link   header_text1" to="/about">
+                  <InfoIcon /> About us
+                </Link>
+              </li>
+        
               <li className="nav-item">
                 <Link className="nav-link   header_text1" to="/services">
                   <MedicalServicesIcon /> Services
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-link   header_text1" to="/conditions">
+                  <LocalHospitalIcon /> Conditions Treated
+                </Link>
+              </li>
+               <li>
+                <Link className="nav-link   header_text1" to="/resouces">
+                  <VaccinesIcon /> Patient Resouces
                 </Link>
               </li>
               <li className="nav-item">
@@ -91,26 +76,18 @@ const Navbar = () => {
                   <CollectionsIcon /> Gallery
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/about">
-                  <InfoIcon /> About us
-                </Link>
-              </li>
+             
               
              
             </ul>
             <div className="d-flex">
-              <Linker
-                className="btn bg-white header_text1"
+              <Link
+                className="btn  header_text1"
                 type="submit"
-                to="contact"
-                smooth={true}
-                style={{
-                  textDecoration: "none",
-                }}
+                to="/contactus"
               >
                 <ContactPageIcon /> Contact us
-              </Linker>
+              </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link   header_text1" to="/login">
