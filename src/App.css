@@ -31,21 +31,14 @@ body{
     }
 .navbar_color{
       background-color: #f7f7f8;
-      margin-top:-40px
+      margin-top:-20px
       
 }
 .navbarcss{
       padding-top: -100px;
 }
-.contactuscss{
-  background-color: #d2145a
-}
-.contactuscss:hover{
-  background-color:black;
-}
 .dark_blue{
       background-color: #043d78;
-      
 }
 .dark_blue:hover{
       background-color: #52759a;
@@ -190,5 +183,6 @@ body{
       font-size: 1rem;
       color: rgb(255, 255, 255);
     }
-    
-    
+.resouces , .Conditions ,.marn-top{
+  margin-top: 1rem;
+}

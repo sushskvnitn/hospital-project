@@ -2,7 +2,7 @@ import React from 'react'
 import DoctorCard from './doctorcard'
 const Doctors = () => {
   return (
-    <>
+    <div className=" Conditions">
     <h1 className="text-center "> Meet Our Professionals </h1>
     <h5 className="text-center" >Place your trust in our team of Doctors with the midas touch and decades
 of experience. Live pain free on your way to recovery.</h5>
@@ -36,7 +36,7 @@ of experience. Live pain free on your way to recovery.</h5>
     </div>
 
 
-    </>
+    </div>
   )
 }
 

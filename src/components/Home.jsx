@@ -8,16 +8,8 @@ import 'swiper/css/scrollbar';
 import Welcome from "../images/welcome.png"
 const Home = () => {
   return (
-    <>
+    <div className="marn-top">
     <div id="Home" ></div>
-    {/* <div style={{zIndex:"-1" }}>
-      <iframe src="https://embed.lottiefiles.com/animation/22463" className="text-center hospital_animation "  title="hi"  style={{ pointerEvents: "none" }}></iframe>
-    </div>
-    <div style={{marginTop:"35vh" ,zIndex:"1" }}>
-      <h1 className="text-center " style={{ color: "#043d78" }}>Narayana Hospital</h1>
-      <h3 className="text-center " >Lorem ipsum dolor sit amet.</h3>
-      <p className="fs-5 text-center"> location : Lorem ipsum dolor sit amet consectetur adipisicing elit. Id in porro recusandae? </p>
-    </div> */}
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
       spaceBetween={50}
@@ -30,12 +22,11 @@ const Home = () => {
     >
     <SwiperSlide><img src={Welcome} className="img-fluid" alt="" /></SwiperSlide>
       <SwiperSlide><img src="https://www.carecochin.com/uploads/banners/shenoys-care-1608615395.jpg" className="img-fluid" alt="" /></SwiperSlide>
-      
-     
+
     </Swiper>
 
       
-    </>
+    </div>
   )
 }
 

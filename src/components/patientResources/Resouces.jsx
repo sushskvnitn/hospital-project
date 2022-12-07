@@ -2,7 +2,7 @@ import React from 'react'
 
 const Resouces = () => {
   return (
-    <div>Resouces</div>
+    <div className="resouces" >Resouces</div>
   )
 }
 

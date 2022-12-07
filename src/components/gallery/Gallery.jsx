@@ -21,7 +21,7 @@ const Gallary = () => {
 
      
   return (
-    <div>
+    <div className="marn-top" >
       <Link className="btn navbar_color text-white mx-4 my-2" to="/">
         <ArrowBackIcon />
       </Link>

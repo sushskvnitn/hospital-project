@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div>
+    <div className="marn-top">
 
       <h1 className="text-center">Our Services</h1> <br /> 
          <div className="container d-flex justify-content-center flex-wrap">

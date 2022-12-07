@@ -3,7 +3,7 @@ import {  Link } from "react-router-dom"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const about = () => {
   return (
-    <>
+    <div className="marn-top">
     <Link className="btn navbar_color text-white mx-4 my-2" to="/" > <ArrowBackIcon/> </Link>
     <h1 className ="text-center ">About us </h1>
      <div className="container d-flex justify-content-center" > 
@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quo eos c
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga saepe vero tempore harum? Tempora voluptates vero odio nesciunt sequi sint dicta natus reprehenderit animi error fugiat quaerat eos magni, magnam voluptatem? Voluptatibus eum perferendis reiciendis quidem pariatur obcaecati iure, adipisci iste ipsa labore, expedita magnam autem similique! Corporis ducimus sapiente nihil, ex aspernatur consequuntur! Tempore sint minima cumque totam doloribus quis atque dolorum deserunt! Molestias ratione minima deleniti, officiis doloremque fugit velit. Est?
        </p>
  </div>
-   </>
+   </div>
   )
 }
 

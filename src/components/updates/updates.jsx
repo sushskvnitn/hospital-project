@@ -6,9 +6,6 @@ const updates = () => {
   AOS.init();
   return (
     <>
-    <br />
-    <span id="updates"></span><br /><br />
-    <br />
       <h3 className="mb-4 text-center py-2 "
       data-aos="fade-right" data-aos-duration="1000" >
         Updates
