@@ -183,6 +183,9 @@ body {
 .marn-top {
   margin-top: 1rem;
 }
+.marn1-top {
+  margin-top: 10rem;
+}
 
 .booking {
   color: #000;
@@ -201,7 +204,7 @@ body {
   background-color: #fff;
 }
 .blue-text {
-  color: #00bcd4;
+  color: #100744;
 }
 .form-control-label {
   margin-bottom: 0;
@@ -222,7 +225,7 @@ textarea:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: 1px solid #00bcd4;
+  border: 1px solid #100744;
   outline-width: 0;
   font-weight: 400;
 }

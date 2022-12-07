@@ -1,10 +1,7 @@
 import React from 'react'
-import {  Link } from "react-router-dom"
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 const about = () => {
   return (
     <div className="marn-top">
-    <Link className="btn navbar_color text-white mx-4 my-2" to="/" > <ArrowBackIcon/> </Link>
     <h1 className ="text-center ">About us </h1>
      <div className="container d-flex justify-content-center" > 
       <h4 className="text-center align-center w-75 my-2 ">

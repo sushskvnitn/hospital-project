@@ -3,7 +3,7 @@ import {useLocation} from 'react-router-dom';
 const Doctorspage = () => {
       const location = useLocation();
   return (
-    <div>
+    <div className="marn-top">
       <h3 className="text-center">
             our Professional DR. {location.state.name}
       </h3>
