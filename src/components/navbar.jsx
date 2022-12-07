@@ -10,6 +10,7 @@ import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 // import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
 import Photo from "../images/logo2.png"
+import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
@@ -82,11 +83,18 @@ const Navbar = () => {
             </ul>
             <div className="d-flex">
               <Link
-                className="btn  header_text1"
+                className="btn btn-sm mx-1 header_text2"
                 type="submit"
                 to="/contactus"
               >
                 <ContactPageIcon /> Contact us
+              </Link>
+              <Link
+                className="btn btn-sm mx-1 header_text2"
+                type="submit"
+                to="/book-appointment"
+              >
+                <BookOnlineIcon /> Book Appointment
               </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
