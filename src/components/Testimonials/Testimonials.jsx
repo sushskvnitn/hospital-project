@@ -33,7 +33,7 @@ const Testimonials = () => {
           <div className="col-md-10 col-xl-8 text-center">
           
             <br />
-            <h3 className="mb-4"> <b>Testimonials</b> </h3>
+            <h3 className="mb-4 "> <b>Testimonials</b> </h3>
             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
               error amet numquam iure provident voluptate esse quasi, veritatis

@@ -13,8 +13,8 @@ import {  Link } from "react-router-dom"
 import Photo from "../images/logo2.png"
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
-// import VaccinesIcon from '@mui/icons-material/Vaccines';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import VaccinesIcon from '@mui/icons-material/Vaccines';
+// import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 const Navbar = () => {
   const navButton = useRef(null);
   const linksContainerRef = useRef(null);
@@ -65,7 +65,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link className="nav-link   header_text1" to="/conditions"onClick={collapseNav} >
-                  <LocalHospitalIcon /> Conditions Treated
+                  <VaccinesIcon /> Conditions Treated
                 </Link>
               </li>
                {/* <li>

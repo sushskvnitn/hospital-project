@@ -28,7 +28,7 @@ const Booking = () => {
     <div className="marn-top booking ">
       <div className="container-fluid px-1 py-5 mx-auto">
         <div className="row d-flex justify-content-center">
-          <h1 className="text-center ">Booking</h1>
+          <h1 className="text-center blue_color "> <b> Book Appointment </b></h1>
           <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
             <p className="blue-text">
               Just answer a few questions

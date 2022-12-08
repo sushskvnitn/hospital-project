@@ -26,7 +26,7 @@ const card = (props) => {
             height="150"
           /> */}
         </div>
-        <h6 className="text-primary mb-3">{props.job}</h6>
+        
         <p className="px-xl-3 fs-5 fst-italic fw-lighter">
           {props.description} <FormatQuoteIcon />
         </p>
@@ -37,7 +37,7 @@ const card = (props) => {
           ))}
           <br />
           <br />
-        </ul>
+        </ul><h6 className="text-primary mb-3">{props.job}</h6>
       </div>
     </>
   );
