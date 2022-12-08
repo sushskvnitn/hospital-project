@@ -1,12 +1,9 @@
 import React ,{ useState  }from 'react'
 const Addmessage = () => {
-
   const [name, setname] = useState("");
   const [occupation, setoccupation] = useState("");
   const [review, setdescription] = useState("");
   const [rating, setrating] = useState();
-
-
   const onsubmit = async (event) => {
     event.preventDefault();
     const res = await fetch("/addreview", {
@@ -33,10 +30,9 @@ const Addmessage = () => {
   }
 
   return (
-    <>
-    <div className="Addmessage">
-      <h1> Add message</h1>
-      <form action="/addreview" method="post" encType="multipart/form-data" >
+    <> <h1 className="my-3 text-center"> Add Review</h1>
+    <div className="Addmessage marn-top d-flex justify-content-center">
+      <form action="/addreview" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
           your name
@@ -63,7 +59,7 @@ const Addmessage = () => {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleFormControlInput1" className="form-label">
+        <label htmlFor="exampleFormControlInput1" className="form-label blue-text">
           your review
         </label>
         <input
@@ -86,12 +82,9 @@ const Addmessage = () => {
           onChange={(e) => setrating(e.target.value)}
         />
       </div>
-      
-      <button className="btn btn-primary" onClick={onsubmit} >submit review</button>
+      <button className="btn " onClick={onsubmit}  style={{backgroundColor:"#100744",color:"white"}}  >submit review</button>
       </form>
     </div>
-    
-
    </>
   )
 }

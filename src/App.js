@@ -16,6 +16,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Resouces from "./components/patientResources/Resouces";
 import Conditions from "./components/conditionsTreated/Conditions";
 import Booking from "./components/book_appointment/booking";
+import Readmore from "./components/Testimonials/readmore";
 function App() {
   return (
     <BrowserRouter>
@@ -47,6 +48,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/doctorscard" element={<DoctorDetails />} />
+      </Routes>
+      <Routes>
+        <Route path="/readmore" element={<Readmore />} />
       </Routes>
       <Routes>
         <Route path="/contactus" element={<Contact />} />

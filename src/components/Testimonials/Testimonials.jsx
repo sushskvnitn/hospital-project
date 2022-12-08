@@ -3,6 +3,7 @@ import Card from "./card";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import { Link } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Testimonials = () => {
@@ -14,6 +15,7 @@ const Testimonials = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        data.reverse();
         setreviews(data);
       });
   }, []);
@@ -38,9 +40,9 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="row text-center  d-flex justify-content-center">
+        <div className="row text-center  d-flex justify-content-center flex-wrap mx-3">
           {
-            revi.map((item) => {
+            revi.slice(0,4).map((item) => {
               return (
                 <Card
                   key={item._id}
@@ -65,13 +67,11 @@ const Testimonials = () => {
               className="btn  dark_blue text-white"
               to="/addmessage"
             >
-              {" "}
               <AddCircleIcon /> add review
             </Link>
-            <button type="button" className="btn btn-warning">
-              {" "}
-              <ReadMoreIcon /> read more
-            </button>
+            <Link type="button" className="btn btn-warning" to="/readmore">
+               read more<ReadMoreIcon />
+            </Link>
           </div>
         </div>
       </section>

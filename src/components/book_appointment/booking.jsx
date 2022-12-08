@@ -22,7 +22,7 @@ const Booking = () => {
         const {  name,lname, address, email, phone, date,doctor } = connect;
         await axios
           .post("/sendmail", connect)
-          .then((response) => alert("mail sent successfully !! , shop keeper will contact you soon !!"));
+          .then((response) => alert("mail sent successfully !!"));
       };
   return (
     <div className="marn-top booking ">
