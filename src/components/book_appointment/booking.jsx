@@ -107,13 +107,13 @@ const Booking = () => {
                   <div className="form-group col-sm-6 flex-column d-flex">
                     <br />
                     <select
-                      class="form-select my-1"
+                      className="form-select my-1"
                       aria-label="Default select example"
                       name="doctor"
                       value={connect.doctor}
                         onChange={handleinputs}
                     >
-                      <option selected>Select Doctor </option>
+                      <option defaultValue>Select Doctor </option>
                       <option value="DR-ABC">DR ABC </option>
                       <option value="DR-EFG">DR EFG </option>
                       <option value="DR-MNO">DR MNO </option>

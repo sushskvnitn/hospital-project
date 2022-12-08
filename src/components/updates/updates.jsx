@@ -1,9 +1,20 @@
-import React from "react";
+import React,{ useState ,useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Ticker from "./Ticker";
-const updates = () => {
+const Updates = () => {
+
   AOS.init();
+  const [update, setupdate] = useState([]);
+  useEffect(() => {
+    fetch("/getticker")
+      .then((res) => res.json())
+      .then((data) => {
+        data.reverse();
+        setupdate(data);
+      });
+  }, []);
+  console.log(update);
   return (
     <>
       <h3 className="mb-4 text-center py-2 "
@@ -12,13 +23,20 @@ const updates = () => {
       </h3>
       <div className="d-flex justify-content-center">
         <div className="box"  data-aos-duration="1500" data-aos="zoom-in" >
-          <Ticker update="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum fuga veniam veritatis?" />
-          <Ticker update="Lorem, ipsum dolor sitt. Aliquam nostrum fuga veniam veritatis?" />
-          <Ticker update="Lorem, ipsum dolor sit amet consectetu nostrum fuga veniam veritatis?" />
-        </div>
+          {update.slice(0, 8).map((item) => {
+            return (
+              <Ticker
+                key={item._id}
+                ticker={item.ticker}
+                link={item.link}
+                new={item.newicon}
+              />
+            );
+          })}
+           </div>
       </div>
     </>
   );
 };
 
-export default updates;
+export default Updates;

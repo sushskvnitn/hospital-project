@@ -3,7 +3,7 @@ const router = express.Router();
 const app = express();
 app.use(express.json());
 const bcrypt = require("bcrypt");
-const {Doctor , Gallery , Review }  = require("../schema/userschema");
+const {Doctor , Gallery , Review ,Ticker }  = require("../schema/userschema");
 const multer = require("multer");
 router.get("/doctors", (req, res) => {
     try {
@@ -17,7 +17,36 @@ router.get("/doctors", (req, res) => {
         console.log(err);
     } 
 });
+router.post("/ticker", (req, res) => {
+    try {
+        const { ticker, link , newicon } = req.body;
+        if (!ticker ) {
+            res.status(400).json({ msg: "Please fill all the fields backend" });
+        }
+        const data = new Ticker({
+            ticker,
+            link,
+            newicon
+        });
+        data.save();
+        res.status(201).json({ msg: "Ticker created successfully" });
+    } catch (error) {
+        console.log(error);
+    }
+});
+router.get("/getticker", (req, res) => {
+    try {
+        Ticker.find({}, (err, ticker) => {
+            if (err) {
+                throw err;
+            }
+            res.send(ticker);
+        });
+    } catch (err) {
 
+        console.log(err);
+    }
+});
 
 router.get("/signup", (req, res) => {
   res.send("hello world from signup");

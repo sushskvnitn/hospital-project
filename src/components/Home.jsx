@@ -17,8 +17,6 @@ const Home = () => {
       navigation
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
     <SwiperSlide><img src={Welcome} className="img-fluid" alt="" /></SwiperSlide>
       <SwiperSlide><img src="https://www.carecochin.com/uploads/banners/shenoys-care-1608615395.jpg" className="img-fluid" alt="" /></SwiperSlide>

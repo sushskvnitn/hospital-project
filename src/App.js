@@ -7,7 +7,7 @@ import Gallery from "./components/gallery/Gallery";
 import CallIcon from "@mui/icons-material/Call";
 import Login from "./components/login/Login";
 import Services from "./components/services/services";
-import Addmessage from "./components/doctorhandle/addmessage";
+import Addmessage from "./components/Testimonials/addmessage";
 import DoctorHandle from "./components/doctorhandle/doctorhandle";
 import Doctors from "./components/doctors/doctors";
 import DoctorDetails from "./components/doctors/doctorpage";

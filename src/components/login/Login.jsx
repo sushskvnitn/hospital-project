@@ -97,7 +97,7 @@ const Login = () => {
                         className="img-fluid"
                         src="https://images.pexels.com/photos/249348/pexels-photo-249348.jpeg?auto=compress&cs=tinysrgb&w=600"
                         alt=""
-                        srcset=""
+                        srcSet=""
                       />
                       <button
                         type="submit"

@@ -68,6 +68,19 @@ const ReviewSchema = new mongoose.Schema({
       }
 });
 
+const TickerSchema = new mongoose.Schema({
+      ticker: {
+            type: String,
+            required: true,
+      },
+      link: {
+            type: String,
+      },
+      newicon:{
+            type : String,
+      }
+})
+
 
 // Hashing the password
 DoctorSchema.pre("save", async function (next) {
@@ -81,9 +94,10 @@ DoctorSchema.pre("save", async function (next) {
 const Doctor = mongoose.model("DOCTOR", DoctorSchema);
 const Gallery = mongoose.model("GALLERY", GallerySchema);
 const Review = mongoose.model("REVIEW", ReviewSchema);
+const Ticker = mongoose.model("TICKER", TickerSchema);
 
 module.exports = {
       Doctor,
-      Gallery,Review
+      Gallery,Review,Ticker
 };
 

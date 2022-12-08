@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 // import ReviewsIcon from "@mui/icons-material/Reviews";
 import InfoIcon from "@mui/icons-material/Info";
@@ -15,14 +16,22 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 const Navbar = () => {
+  const navButton = useRef(null);
+  const linksContainerRef = useRef(null);
+
+  function collapseNav() {
+    navButton.current.classList.add("collapsed");
+    linksContainerRef.current.classList.remove("show");
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar_color sticky-top  " >
         <div className="container-fluid ">
-          <Link className="navbar-brand  header_text" to="/">
+          <Link className="navbar-brand  header_text" to="/"  onClick={collapseNav} >
             <img width="80" height="50" className="d-inline-block align-top " src={Photo} alt="" srcSet="" />
           </Link>
           <button
+               ref={navButton}
             className="navbar-toggler "
             type="button "
             data-bs-toggle="collapse"
@@ -33,47 +42,44 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon "></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent" ref={linksContainerRef}>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <div
                 className="nav-item"
-                to="Home"
-                smooth={true}
-                style={{ textDecoration: "none" }}
               >
                
-                <Link className="nav-link   header_text1"  to="/">
+                <Link className="nav-link   header_text1"  to="/" onClick={collapseNav}>
                   <ApartmentIcon /> Home
                 </Link>
               </div> 
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/about">
+                <Link className="nav-link   header_text1" to="/about" onClick={collapseNav}>
                   <InfoIcon /> About us
                 </Link>
               </li>
         
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/services">
+                <Link className="nav-link   header_text1" to="/services" onClick={collapseNav} >
                   <MedicalServicesIcon /> Services
                 </Link>
               </li>
               <li>
-                <Link className="nav-link   header_text1" to="/conditions">
+                <Link className="nav-link   header_text1" to="/conditions"onClick={collapseNav} >
                   <LocalHospitalIcon /> Conditions Treated
                 </Link>
               </li>
                <li>
-                <Link className="nav-link   header_text1" to="/resouces">
+                <Link className="nav-link   header_text1" to="/resouces" onClick={collapseNav}>
                   <VaccinesIcon /> Patient Resouces
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/doctors" >
+                <Link className="nav-link   header_text1" to="/doctors" onClick={collapseNav} >
                   <PersonAddIcon /> Meet Our Professionals
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link   header_text1" to="/gallery" >
+                <Link className="nav-link   header_text1" to="/gallery" onClick={collapseNav}>
                   <CollectionsIcon /> Gallery
                 </Link>
               </li>
@@ -86,6 +92,7 @@ const Navbar = () => {
                 className="btn btn-sm mx-1 header_text2"
                 type="submit"
                 to="/contactus"
+                onClick={collapseNav}
               >
                 <ContactPageIcon /> Contact us
               </Link>
@@ -93,12 +100,13 @@ const Navbar = () => {
                 className="btn btn-sm mx-1 header_text2"
                 type="submit"
                 to="/book-appointment"
+                onClick={collapseNav}
               >
                 <BookOnlineIcon /> Book Appointment
               </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link   header_text1" to="/login">
+                  <Link className="nav-link   header_text1" to="/login" onClick={collapseNav}>
                     <LoginIcon /> 
                   </Link>
                 </li>
