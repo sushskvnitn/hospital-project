@@ -24,14 +24,16 @@ const Testimonials = () => {
     <>
       <section
         className="Testimonials my-2"
-        data-aos="fade-right"
-        data-aos-duration="1000"
+        style={{
+          backgroundColor:"#225a97"
+        }}
       >
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex justify-content-center text-white" data-aos="fade-right"
+        data-aos-duration="1000">
           <div className="col-md-10 col-xl-8 text-center">
           
             <br />
-            <h3 className="mb-4">Testimonials</h3>
+            <h3 className="mb-4"> <b>Testimonials</b> </h3>
             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
               error amet numquam iure provident voluptate esse quasi, veritatis

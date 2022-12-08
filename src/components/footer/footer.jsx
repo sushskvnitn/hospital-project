@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
   
-<footer className="bg-light text-center text-black">
+<footer className=" text-center text-white" style={{ backgroundColor:"#043d78"}}>
 <div className="container p-4">
     <div className="row">
       <div className="col-lg-8 col-md-12 mb-4 mb-md-0">
@@ -60,9 +60,9 @@ const Footer = () => {
     </section>
   </div>
 
-  <div className="text-center p-3 text-dark" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
+  <div className="text-center p-3 text-white" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
     © 2022 Copyright:
-    <a className="text-dark" href="https://hospitalpro.netlify.app/">hospitalpro.netlify.app</a>
+    <a className="text-white" href="https://hospitalpro.netlify.app/">hospitalpro.netlify.app</a>
   </div>
 </footer>
 

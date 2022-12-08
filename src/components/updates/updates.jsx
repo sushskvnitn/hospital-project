@@ -16,9 +16,9 @@ const Updates = () => {
   }, []);
   return (
     <>
-      <h3 className="mb-4 text-center py-2 "
+      <h3 className="mb-4 text-center py-2 blue_color"
       data-aos="fade-right" data-aos-duration="1000" >
-        Updates
+       <b> Updates</b>
       </h3>
       <div className="d-flex justify-content-center">
         <div className="box"  data-aos-duration="1500" data-aos="zoom-in" >

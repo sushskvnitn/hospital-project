@@ -15,7 +15,7 @@ const Readmore = () => {
   }, []);
   return (
     <div  style={{overflow: 'hidden'}}>
-    <h1 className="text-center marn-top ">Testimonials</h1>
+    <h1 className="text-center marn-top "> <b> Testimonials</b></h1>
     <Link
               type="button"
               className="btn  dark_blue text-white "

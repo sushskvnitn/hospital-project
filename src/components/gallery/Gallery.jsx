@@ -22,10 +22,10 @@ const Gallary = () => {
      
   return (
     <div className="marn-top" >
-      <Link className="btn navbar_color text-white mx-4 my-2" to="/">
+      <Link className="btn navbar_color text-dark mx-4 my-2" to="/">
         <ArrowBackIcon />
       </Link>
-      <h1 className="text-center "> Gallery </h1>
+      <h1 className="text-center blue_color"> <b> Gallery </b></h1>
       <div className=" d-flex justify-content-center  flex-wrap px-2">
          
        {

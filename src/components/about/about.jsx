@@ -2,7 +2,7 @@ import React from 'react'
 const about = () => {
   return (
     <div className="marn-top">
-    <h1 className ="text-center ">About us </h1>
+    <h1 className ="text-center "> <b> About us </b></h1>
      <div className="container d-flex justify-content-center" > 
       <h4 className="text-center align-center w-75 my-2 ">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quo eos consectetur quae magni asperiores mollitia ratione eaque? Quasi corporis sunt accusamus expedita pariatur accusantium, saepe possimus earum.

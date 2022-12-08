@@ -48,15 +48,15 @@ const Addticker = () => {
 
   return (
     <form>
-      <div className="w-75">
-        <div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">
+      <div className=" d-flex justify-content-center">
+        <div style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
+          <div className="mb-3 " >
+            <label for="formGroupExampleInput" className="form-label">
               Update
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="Enter the update text here "
               name="ticker"
@@ -64,13 +64,13 @@ const Addticker = () => {
               value={update.ticker}
             />
           </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">
+          <div className="mb-3">
+            <label for="formGroupExampleInput2" className="form-label">
               link
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput2"
               placeholder="Paste update link here "
               name="link"
@@ -78,13 +78,13 @@ const Addticker = () => {
               value={update.link}
             />
           </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">
+          <div className="mb-3">
+            <label for="formGroupExampleInput2" className="form-label">
               show new icon ?
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput2"
               placeholder="Enter yes for showing  "
               name="newicon"
@@ -92,10 +92,10 @@ const Addticker = () => {
               value={update.newicon}
             />
           </div>
-          <div class="col-12">
+          <div className="col-12">
             <button
               type="submit"
-              class="btn btn-primary"
+              className="btn dark_blue text-white"
               onClick={handlesubmit}
             >
               Add update

@@ -4,19 +4,15 @@ const Services = () => {
   return (
     <div className="marn-top">
 
-      <h1 className="text-center">Our Services</h1> <br /> 
+      <h1 className="text-center blue_color"> <b>Our Services</b> </h1> <br /> 
          <div className="container d-flex justify-content-center flex-wrap">
-<iframe
-              autoPlay
-              loop title="homeicon" 
+<iframe  title="homeicon" 
               className="d-none d-lg-block"
               src="https://embed.lottiefiles.com/animation/24867"
               style={{ height: "18rem", width: "18rem" ,pointerEvents:"none"}}
             ></iframe>
            
-              <iframe
-                autoPlay
-                loop title="homeicon"
+              <iframe title="homeicon"
                 className="d-block d-lg-none"
                 src="https://embed.lottiefiles.com/animation/24867"
               style={{ height: "18rem", width: "18rem" ,pointerEvents:"none"}}

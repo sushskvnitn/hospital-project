@@ -131,8 +131,9 @@ const Booking = () => {
                   <div className="form-group col-sm-6">
                     <button
                       type="submit"
-                      className="btn-block btn-primary buttn"
+                      className="btn-block  buttn"
                       onClick={onSubmit}
+                      style={{backgroundColor:"#225a97"}}
                     >
                       Book Appointment
                     </button>

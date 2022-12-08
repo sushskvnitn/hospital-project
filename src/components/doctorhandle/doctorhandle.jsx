@@ -6,13 +6,13 @@ const DoctorHandle = () => {
     <>
       <div className="marn-top">
         <div className="">
-          <div className="" style={{ width: "75rem" }}>
-            <h1>this page is only for the doctor</h1>
-            <h3>Upload image into gallary </h3>
+          <div className="my-3" >
+            <h5 className="text-center text-danger "> Note :<b> This Page is only for the Hospital Owner</b></h5>
+            <h3 className="text-center blue-text"> <b> Upload image into gallary </b></h3>
             <UploadImg />
             
           </div><br />
-          <h3>Add New Update </h3>
+          <h3 className="text-center blue-text"> <b> Add New Update</b> </h3>
             <Addticker />
         </div>
       </div>

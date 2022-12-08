@@ -39,7 +39,7 @@ const Login = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
-              <h1 className="mb-3">Login </h1>
+              <h1 className="mb-3"> <b> Login </b></h1>
               <div className="bg-white shadow rounded">
                 <div className="row">
                   <div className="col-md-7 pe-0">

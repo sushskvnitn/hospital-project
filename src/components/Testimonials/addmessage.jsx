@@ -30,7 +30,7 @@ const Addmessage = () => {
   }
 
   return (
-    <> <h1 className="my-3 text-center"> Add Review</h1>
+    <> <h1 className="my-3 text-center"> <b> Add Review </b></h1>
     <div className="Addmessage marn-top d-flex justify-content-center">
       <form action="/addreview" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">

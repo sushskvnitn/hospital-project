@@ -3,7 +3,7 @@ import React from 'react'
 const Conditions = () => {
   return (
     <div className="Conditions marn-top " >
-      <h1 className="text-center ">Conditions Treated</h1>
+      <h1 className="text-center "> <b> Conditions Treated</b> </h1>
       <div className="text-center mx-4 ">
      <h4>Summary of the clinical experience in Rheumatology</h4> 
 

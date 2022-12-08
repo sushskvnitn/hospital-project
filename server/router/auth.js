@@ -86,7 +86,7 @@ if ( !username ||!email || !password) {
       .json({ error: "make sure all fields are filled up " });
   }
       //here User is from user schema 
-    const userlogin= await Doctor.findOne({ email: email });
+    const userlogin= await Doctor.findOne({ email: email,name:username });
     // console.log(req.body);
         //password is from the user and userlogin.password() is from database     
     if(userlogin){

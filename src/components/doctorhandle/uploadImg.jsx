@@ -26,8 +26,8 @@ const UploadImg = () => {
     }
   }
   return (
-    <div className=" m-4 my-4 w-50 " >
-      <form action="/addphoto" method="post" encType="multipart/form-data" >
+    <div className=" m-4 my-4 d-flex justify-content-center"  >
+      <form action="/addphoto" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
           image title
@@ -60,11 +60,11 @@ const UploadImg = () => {
           name="Name"
           onChange={uploadimg}
         />
-        <label className="input-group-text" htmlFor="inputGroupFile02">
+        <label className="input-group-text mt-1" htmlFor="inputGroupFile02">
           Upload
         </label>
       </div>
-      <button className="btn btn-primary" onClick={onsubmit} >submit</button>
+      <button className="btn dark_blue text-white" onClick={onsubmit}  >submit</button>
       </form>
     </div>
   );
