@@ -1,4 +1,5 @@
 import React ,{ useState} from "react";
+
 import axios from "axios";
 const Booking = () => {
     const [connect, connectdata] = useState({
@@ -68,9 +69,7 @@ const Booking = () => {
                 </div>
                 <div className="row justify-content-between text-left">
                   <div className="form-group col-sm-6 flex-column d-flex">
-                    
                     <label className="form-control-label px-3">
-                      
                       email<span className="text-danger"> *</span>
                     </label>
                     <input
@@ -83,7 +82,6 @@ const Booking = () => {
                     />
                   </div>
                   <div className="form-group col-sm-6 flex-column d-flex">
-                    
                     <label className="form-control-label px-3">
                       Phone number<span className="text-danger"> *</span>
                     </label>
@@ -122,13 +120,13 @@ const Booking = () => {
                 </div>
                 <div className="row justify-content-between text-left">
                   <div className="form-group col-12 flex-column d-flex">
-                    
                     <label className="form-control-label px-3">
                       Your Address<span className="text-danger"> *</span>
                     </label>
                     <input type="text" id="ans" name="address" placeholder="" value={connect.address} onChange={handleinputs} />
                   </div>
                 </div>
+
                 <div className="row justify-content-end">
                   <div className="form-group col-sm-6">
                     <button

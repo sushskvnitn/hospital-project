@@ -98,7 +98,7 @@ const Addticker = () => {
               class="btn btn-primary"
               onClick={handlesubmit}
             >
-              Sign in
+              Add update
             </button>
           </div>
         </div>
