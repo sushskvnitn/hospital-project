@@ -14,7 +14,6 @@ const Updates = () => {
         setupdate(data);
       });
   }, []);
-  console.log(update);
   return (
     <>
       <h3 className="mb-4 text-center py-2 "

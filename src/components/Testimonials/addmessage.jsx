@@ -1,34 +1,34 @@
 import React ,{ useState  }from 'react'
-import axios from "axios";
 const Addmessage = () => {
 
   const [name, setname] = useState("");
-  const [file, setfile] = useState("");
   const [occupation, setoccupation] = useState("");
-  const [description, setdescription] = useState("");
+  const [review, setdescription] = useState("");
   const [rating, setrating] = useState();
 
-  const uploadimg = (event) => {
-    setfile(event.target.files[0]);
-  };
+
   const onsubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData();
-    data.append("Name", name);
-    data.append("photo", file);
-    data.append("occupation", occupation);
-    data.append("review", description);
-    data.append("rating", rating);
-
-
-    try {
-     let response = await axios.post("/addmessage", data);
-      console.log(response+"response");
-      if (response.status === 200) {
-        alert("uploaded successfully");
-      }
-    } catch (error) {
-      console.error(error+"error");
+    const res = await fetch("/addreview", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        occupation,
+        review,
+        rating,
+      }),
+    });
+    const data = await res.json();
+    if (res.status === 422 || !data) {
+      window.alert("invalid registration");
+      console.log("invalid registration");
+    }
+    else {
+      window.alert("review added successfully");
+      console.log("review added successfully");
     }
   }
 
@@ -36,7 +36,7 @@ const Addmessage = () => {
     <>
     <div className="Addmessage">
       <h1> Add message</h1>
-      <form action="/addmessage" method="post" encType="multipart/form-data" >
+      <form action="/addreview" method="post" encType="multipart/form-data" >
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
           your name
@@ -87,19 +87,6 @@ const Addmessage = () => {
         />
       </div>
       
-      <div className="input-group mb-3">
-        <input
-          type="file"
-          className="form-control"
-          id="inputGroupFile02"
-          name="Name"
-          placeholder="upload image"
-          onChange={uploadimg}
-        />
-        <label className="input-group-text" htmlFor="inputGroupFile02">
-          Upload
-        </label>
-      </div>
       <button className="btn btn-primary" onClick={onsubmit} >submit review</button>
       </form>
     </div>

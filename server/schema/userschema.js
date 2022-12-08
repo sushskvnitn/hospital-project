@@ -45,10 +45,6 @@ const GallerySchema = new mongoose.Schema({
 
 const ReviewSchema = new mongoose.Schema({
      
-      photo: {
-            type: String,
-            required: true,
-      },
       occupation:
       {
             type: String,

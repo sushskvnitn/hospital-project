@@ -43,7 +43,6 @@ router.get("/getticker", (req, res) => {
             res.send(ticker);
         });
     } catch (err) {
-
         console.log(err);
     }
 });
@@ -112,7 +111,7 @@ const storage = multer.diskStorage({
     cb(null,  Date.now()+file.originalname);
   }
 })
-const upload = multer({ storage })
+const upload = multer({ storage  })
 
 router.post('/addphoto',upload.single('Name') ,async (req, res) => {
   let photo = (req.file) ? req.file.filename : null;
@@ -134,31 +133,38 @@ router.post('/addphoto',upload.single('Name') ,async (req, res) => {
     console.log(error);
   }
 });
-
-router.post('/addmessage',upload.single('Image') ,async (req, res) => {
-  let photo = (req.file) ? req.file.filename : null;
+router.post('/addreview' ,async (req, res) => {
   const { occupation, review, name, rating} = req.body;
   console.log(req.body);
-  if ( !occupation || !review || !name || !rating ) {
+  if ( !occupation || !review || !name || !rating ){
     res.status(400).json({ msg: "Please fill all the fields" });
   }
   try {
-    const data1 = new Review({
-      photo,
+    const data = new Review({
       occupation,
       review,
       name,
-      rating,
+      rating
     });
-    console.log(data1);
-    const res = await data1.save();
-    res.status(200).json({ success: "message added successfully" });
+    const res = await data.save();
+    res.json({ success: "image uploaded successfully" });
 
   } catch (error) {
     console.log(error);
   }
 });
-
+router.get('/getreviews' ,async (req, res) => {
+  try {
+    Review.find({}, (err, review) => {
+        if (err) {
+            throw err;
+        }
+        res.send(review);
+    });
+} catch (err) {
+    console.log(err);
+}
+})
 router.get('/gallery',async (req, res) => {
   try {
     const gallery = await Gallery.find();

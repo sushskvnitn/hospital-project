@@ -14,16 +14,17 @@ const card = (props) => {
         }}
         data-aos="flip-left"
         data-aos-duration="2000"
+        key={props.id}
 
       >
         <div className="d-flex justify-content-center mb-4">
-          <img
+          {/* <img
             src={props.image}
             className="rounded-circle shadow-1-strong"
             alt="testimonials"
             width="150"
             height="150"
-          />
+          /> */}
         </div>
         <h6 className="text-primary mb-3">{props.job}</h6>
         <p className="px-xl-3 fs-5 fst-italic fw-lighter">
