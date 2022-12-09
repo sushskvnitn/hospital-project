@@ -1,26 +1,77 @@
 import React from 'react'
-
+import "./services.css"
 const Services = () => {
   return (
     <div className="marn-top">
 
       <h1 className="text-center blue_color"> <b>Our Services</b> </h1> <br /> 
-         <div className="container d-flex justify-content-center flex-wrap">
-<iframe  title="homeicon" 
-              className="d-none d-lg-block"
-              src="https://embed.lottiefiles.com/animation/24867"
-              style={{ height: "18rem", width: "18rem" ,pointerEvents:"none"}}
-            ></iframe>
-           
-              <iframe title="homeicon"
-                className="d-block d-lg-none"
-                src="https://embed.lottiefiles.com/animation/24867"
-              style={{ height: "18rem", width: "18rem" ,pointerEvents:"none"}}
-              ></iframe>    
-   <p className="text-center ">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum quibusdam a placeat saepe? Provident minus culpa beatae ipsam saepe vel quidem quibusdam autem laboriosam eum fugiat omnis impedit molestiae possimus eaque alias similique distinctio dolore unde, debitis a pariatur illum vitae. Quas et corporis fugit, non obcaecati tempore neque id nostrum delectus similique temporibus, repudiandae dolor esse harum cumque dignissimos explicabo perspiciatis voluptate nesciunt ducimus unde. Veniam ducimus, a odio dignissimos delectus exercitationem, temporibus, assumenda iste excepturi quia ullam? Eaque at alias asperiores nulla, omnis nisi deserunt iusto itaque, commodi quaerat dolorum veniam consequatur consectetur ipsam quibusdam fugit officia placeat voluptas! Dolor reiciendis vitae, quibusdam aspernatur ipsam porro, asperiores beatae ullam eligendi autem qui molestiae eaque cupiditate fugiat illo deserunt? Nisi, veritatis libero consectetur fugit obcaecati aspernatur voluptas, similique, delectus provident facilis tempora et explicabo?
-   </p>
-    </div>
+      <section className="we-offer-area text-center bg-gray">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="site-heading text-center">
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                    </div>
+                </div>
+            </div>
+                <div className="row our-offer-items less-carousel">
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-pen-fancy"></i>
+                            <h4>lorem creation</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-dharmachakra"></i>
+                            <h4>hospital Development</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-tasks"></i>
+                            <h4>hospital Management</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-tachometer-alt"></i>
+                            <h4>Project Impliment</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-recycle"></i>
+                            <h4>keep patients Update</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-headset"></i>
+                            <h4>24/7 Support</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
    
     </div>
   )
