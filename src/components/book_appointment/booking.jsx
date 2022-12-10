@@ -62,11 +62,11 @@ const Booking = () => {
     e.preventDefault();
     // eslint-disable-next-line no-unused-vars
     const { name, lname, address, email, phone, date, doctor } = connect;
-    // reduceSlotsbyone();
-    // if(slots>0){
-      // await axios
-      // .post("/sendmail", connect)
-      // .then((response) => alert("mail sent successfully !!"));
+    reduceSlotsbyone();
+    if(slots>0){
+      await axios
+      .post("/sendmail", connect)
+      .then((response) => alert("mail sent successfully !!"));
 
     const doc = new jspdf();
     
@@ -112,9 +112,9 @@ const Booking = () => {
     doc.text("Nagpur-440010 ", 20, 270);
     doc.text("Phone: 0712- 254 0000 ", 20, 275);
     doc.save("appointment.pdf");
-    // }else{
-    //   alert("Sorry, slots are full for today");
-    // }
+    }else{
+      alert("Sorry, slots are full for today");
+    }
    
   };
   return (
