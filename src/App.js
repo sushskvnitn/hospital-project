@@ -61,7 +61,7 @@ function App() {
     resetAtMidnight();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+ 
   return (
     <BrowserRouter>
       <Navbar />

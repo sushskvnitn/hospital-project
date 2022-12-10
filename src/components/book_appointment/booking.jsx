@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from "react";
 import jspdf from "jspdf";
-// import axios from "axios";
+import axios from "axios";
 
 import logo from "../../images/logo1.png";
 const Booking = () => {
@@ -63,9 +63,10 @@ const Booking = () => {
     // eslint-disable-next-line no-unused-vars
     const { name, lname, address, email, phone, date, doctor } = connect;
     reduceSlotsbyone();
-    // await axios
-    //   .post("/sendmail", connect)
-    //   .then((response) => alert("mail sent successfully !!"));
+    if(slots>0){
+      await axios
+      .post("/sendmail", connect)
+      .then((response) => alert("mail sent successfully !!"));
 
     const doc = new jspdf();
     doc.addImage(logo, "PNG", 90, 10, 30, 10);
@@ -102,9 +103,13 @@ const Booking = () => {
     );
     doc.text("and get the doctor and get your appointment done.", 30, 150);
     doc.save("appointment.pdf");
+    }else{
+      alert("Sorry, slots are full for today");
+    }
+   
   };
   return (
-    <div className="marn-top booking ">
+    <div className="marn-top booking text-dark">
       <div className="container-fluid px-1 py-5 mx-auto">
         <div className="row d-flex justify-content-center">
           <h1 className="text-center blue_color ">
@@ -128,6 +133,7 @@ const Booking = () => {
                       type="text"
                       id="fname"
                       name="name"
+                      className="text-dark"
                       value={connect.name}
                       onChange={handleinputs}
                       placeholder="Enter your first name"
@@ -141,6 +147,7 @@ const Booking = () => {
                       type="text"
                       id="lname"
                       name="lname"
+                      className="text-dark"
                       value={connect.lname}
                       onChange={handleinputs}
                       placeholder="Enter your last name"
@@ -155,6 +162,7 @@ const Booking = () => {
                     <input
                       type="text"
                       id="email"
+                      className="text-dark"
                       name="email"
                       placeholder="Enter your email"
                       value={connect.email}
@@ -166,9 +174,10 @@ const Booking = () => {
                       Phone number<span className="text-danger"> *</span>
                     </label>
                     <input
-                      type="text"
+                      type="number"
                       id="mob"
                       name="phone"
+                      className="text-dark"
                       placeholder="Enter your phone number"
                       value={connect.phone}
                       onChange={handleinputs}
@@ -184,6 +193,7 @@ const Booking = () => {
                       type="date"
                       id="job"
                       name="date"
+                      className="text-dark"
                       placeholder="Enter the date for appointment "
                       value={connect.date}
                       onChange={handleinputs}
@@ -214,7 +224,8 @@ const Booking = () => {
                       type="text"
                       id="ans"
                       name="address"
-                      placeholder=""
+                      placeholder="Enter your address "
+                      className="text-dark"
                       value={connect.address}
                       onChange={handleinputs}
                     />

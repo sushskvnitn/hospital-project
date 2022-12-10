@@ -182,7 +182,7 @@ router.post("/addslots", async (req, res) => {
       slots,
      });
     const res = await data.save();
-     res.status(201).json({ msg: "Slots created successfully" });
+     res.send( "Slots created successfully" );
   } catch (error) {
     console.log(error);
   }
@@ -206,8 +206,7 @@ router.put("/decreaseslots", async (req, res) => {
     if(data){
       const newslots = slots;
       const res = await Slot.updateOne({ _id: _id }, { $set: { slots: newslots } });
-      res.status(201).json({ msg: "Slots updated successfully" });
-      
+      res.send( "Slots updated successfully" );
     } else {
       res.status(400).json({ msg: "Slots not found" });
     }
