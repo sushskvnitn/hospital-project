@@ -62,50 +62,59 @@ const Booking = () => {
     e.preventDefault();
     // eslint-disable-next-line no-unused-vars
     const { name, lname, address, email, phone, date, doctor } = connect;
-    reduceSlotsbyone();
-    if(slots>0){
-      await axios
-      .post("/sendmail", connect)
-      .then((response) => alert("mail sent successfully !!"));
+    // reduceSlotsbyone();
+    // if(slots>0){
+      // await axios
+      // .post("/sendmail", connect)
+      // .then((response) => alert("mail sent successfully !!"));
 
     const doc = new jspdf();
-    doc.addImage(logo, "PNG", 90, 10, 30, 10);
+    
+    doc.setFontSize(8);
+    doc.setFillColor(0,0,0);
+    doc.rect(0, 0, 230, 40,'F');
+    doc.addImage(logo, "PNG", 90, 10, 40, 13);
+    doc.setTextColor(255,255,255);
+    doc.textWithLink("Go to our website",170, 35,{url: "https://hospitalpro.netlify.app/"});
     doc.setFontSize(25);
-    doc.setTextColor(4, 61, 120);
-    doc.text("Appointment Letter", 75, 30);
-    doc.setFontSize(15);
+    doc.setTextColor(255, 255, 255);
+    doc.text("Appointment Letter", 75, 35);
+    doc.setFontSize(13);
     doc.setTextColor(0, 0, 0);
-    doc.setFont("helvetica");
-    doc.rect(15, 35, 170, 140);
-
-    doc.text("Name: " + name, 20, 50);
-    doc.text("Last Name: " + lname, 20, 60);
-    doc.text("Address: " + address, 20, 70);
-    doc.text("Email: " + email, 20, 80);
-    doc.text("Phone: " + phone, 20, 90);
-    doc.text("Date: " + date, 20, 100);
-    doc.text("Doctor: " + doctor, 20, 110);
-    doc.text("Token number : " + (20 -slots), 20, 120);
-
+    doc.text("First Name: " + name, 20, 50);
+    doc.text("Last Name: " + lname, 20, 58);
+    doc.text("Address: " + address, 20, 66);
+    doc.text("Email: " + email, 20, 74);
+    doc.text("Phone: " + phone, 20, 82);
+    doc.text("Date: " + date, 20, 90);
+    doc.text("Doctor: " + doctor, 20, 98);
+    doc.text("Token number : " + (20 -slots), 20, 106);
     doc.setFontSize(12);
-    doc.text("Thank you for booking an appointment with us.", 20, 130);
+    doc.text("Thank you for booking an appointment with us.", 20, 112);
     doc.setFillColor(255, 0, 0);
     doc.setTextColor(255, 0, 0);
-    doc.text(
-      "Note : Now you can go to the hospital with this appointment letter ans  ",
-      20,
-      140
-    );
-    doc.text(
-      "show the appointment letter to the Receptionist and follow the further procedure.",
-      30,
-      145
-    );
-    doc.text("and get the doctor and get your appointment done.", 30, 150);
+    doc.setDrawColor(4,61,120)
+    doc.setLineWidth(1);    
+    doc.line(0, 116, 240, 116);     
+    doc.text( "Note : Now you can go to the hospital with this appointment letter and show the appointment ",20,120);
+    doc.text( "letter to the Receptionist and follow the further procedure.", 30, 125);
+    doc.setLineWidth(1);    
+    doc.line(0, 126, 240, 126); 
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(13);
+    doc.setFillColor(0,0,0)
+    doc.rect(0,250, 230, 40,'F');
+    doc.setTextColor(255, 255, 255);
+    doc.text("Hospital Address ", 20, 255);
+    doc.setFontSize(11);
+    doc.text("Sanjeevan Advanced Rheumatology Centre ", 20, 260);
+    doc.text(" 502,shreeyash,95 East High court Road ,Ramdaspeth ", 20, 265);
+    doc.text("Nagpur-440010 ", 20, 270);
+    doc.text("Phone: 0712- 254 0000 ", 20, 275);
     doc.save("appointment.pdf");
-    }else{
-      alert("Sorry, slots are full for today");
-    }
+    // }else{
+    //   alert("Sorry, slots are full for today");
+    // }
    
   };
   return (
