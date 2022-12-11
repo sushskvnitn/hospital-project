@@ -1,5 +1,6 @@
 import React from 'react'
 import Diseasecard from './Disease-card'
+import "../services/services.css"
 const Conditions = () => {
   return (
     <div className="Conditions marn-top " >
@@ -21,10 +22,43 @@ const Conditions = () => {
  
 
  </div>
-   
- <h4 className="blue_color" >Procedures</h4>   – Intra-articular injections, lip biopsy, nerve-muscle biopsy, Trigger finger injections, Carpal Tunnel injections etc.
 
- <h4 className="blue_color">Laboratory tests</h4>   – ANA & ANCA (immunofluorescence), Immunoblots (ANA, myositis-ANAs), ELISAs (ANCA, specific ANA antibodies, anticardiolipin antibodies), Flowcytometry etc.
+ <div className="row our-offer-items less-carousel we-offer-area text-center">
+                    <div className="col-md-6 col-sm-6 equal-height">
+                        <div className="item blue_color">
+                            <i className="fas fa-scroll"></i>
+                            <h4>Procedures</h4>
+                            <p>
+                            Intra-articular injections
+                            </p>
+                            <p>
+                            Lip biopsy
+                            </p>
+                            <p>Nerve-muscle Biopsy</p>
+                            <p>Trigger finger injections</p>
+                            <p>Carpal Tunnel injections</p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-6 equal-height">
+                        <div className="item">
+                            <i className="fas fa-microscope"></i>
+                            <h4>Laboratory tests</h4>
+                            <p>
+                            ANA & ANCA (immunofluorescence)
+                            </p>
+                            <p>
+                            Immunoblots (ANA, myositis-ANAs)
+                            </p>
+                            <p>ELISAs (ANCA, specific ANA antibodies, <br /> anticardiolipin antibodies)</p>
+                            <p>Flowcytometry</p>
+
+                        </div>
+                    </div>
+                    </div>
+   <br />
+ {/* <h4 className="blue_color" >Procedures</h4>   – Intra-articular injections, lip biopsy, nerve-muscle biopsy, Trigger finger injections, Carpal Tunnel injections etc.
+
+ <h4 className="blue_color">Laboratory tests</h4>   – ANA & ANCA (immunofluorescence), Immunoblots (ANA, myositis-ANAs), ELISAs (ANCA, specific ANA antibodies, anticardiolipin antibodies), Flowcytometry etc. */}
       </div>
     </div>
   )
