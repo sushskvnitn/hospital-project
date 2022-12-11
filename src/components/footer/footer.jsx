@@ -3,6 +3,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GoogleIcon from '@mui/icons-material/Google';
+import Photo from "../../images/logo2.png";
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
@@ -10,6 +12,8 @@ const Footer = () => {
 <footer className=" text-center text-white" style={{ backgroundColor:"#043d78"}}>
 <div className="container p-4">
     <div className="row">
+      <Link>
+      <img src={Photo} width="10%" alt="" /></Link>
       <div className="col-lg-8 col-md-12 mb-4 mb-md-0">
         <h5 className="text-uppercase">description</h5>
 

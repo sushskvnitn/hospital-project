@@ -16,12 +16,12 @@ const Updates = () => {
   }, []);
   return (
     <>
-      <h3 className="mb-4 text-center py-2 blue_color"
+      <h3 className="mb-4 pt-4 text-center py-2 blue_color"
       data-aos="fade-right" data-aos-duration="1000" >
        <b> Updates</b>
       </h3>
       <div className="d-flex justify-content-center">
-        <div className="box"  data-aos-duration="1500" data-aos="zoom-in" >
+        <div className="box mb-5"  data-aos-duration="1500" data-aos="zoom-in" >
           {update.slice(0, 8).map((item) => {
             return (
               <Ticker

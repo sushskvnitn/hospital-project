@@ -10,7 +10,7 @@ import LoginIcon from "@mui/icons-material/Login";
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 // import { Link as Linker } from "react-scroll";
 import {  Link } from "react-router-dom"
-import Photo from "../images/logo2.png"
+import Photo from "../images/logo2.png";
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VaccinesIcon from '@mui/icons-material/Vaccines';

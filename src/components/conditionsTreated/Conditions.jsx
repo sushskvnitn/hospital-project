@@ -3,11 +3,11 @@ import Diseasecard from './Disease-card'
 const Conditions = () => {
   return (
     <div className="Conditions marn-top " >
-      <h1 className="text-center blue_color"> <b> Conditions Treated</b> </h1>
+      <h1 className="text-center blue_color pt-4"> <b> Conditions Treated</b> </h1>
       <div className=" mx-4 ">
-     <h5>Summary of the clinical experience in Rheumatology</h5> 
+     <h4 className="text-center mt-4">Summary of the clinical experience in Rheumatology</h4> 
 
-<div> A broad summary of experience (although not an extensive one) gained in Rheumatology is as given below  </div>
+<h5 className="text-center"> A broad summary of experience (although not an extensive one) gained in Rheumatology is as given below  </h5>
 <br />
  <h3 className="blue_color">Diseases :</h3>  <br />
  <div className="d-flex justify-content-center flex-wrap "> 

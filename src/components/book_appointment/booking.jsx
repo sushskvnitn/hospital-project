@@ -132,7 +132,7 @@ const Booking = () => {
 
             <div className="cards">
               <h5 className="text-center mb-4">Add your Details here </h5>
-              <form className="form-card">
+              <form className="form-card" onSubmit={onSubmit}>
                 <div className="row justify-content-between text-left">
                   <div className="form-group col-sm-6 flex-column d-flex">
                     <label className="form-control-label px-3">
@@ -146,6 +146,7 @@ const Booking = () => {
                       value={connect.name}
                       onChange={handleinputs}
                       placeholder="Enter your first name"
+                      required
                     />
                   </div>
                   <div className="form-group col-sm-6 flex-column d-flex">
@@ -160,6 +161,7 @@ const Booking = () => {
                       value={connect.lname}
                       onChange={handleinputs}
                       placeholder="Enter your last name"
+                      required
                     />
                   </div>
                 </div>
@@ -176,6 +178,7 @@ const Booking = () => {
                       placeholder="Enter your email"
                       value={connect.email}
                       onChange={handleinputs}
+                      required
                     />
                   </div>
                   <div className="form-group col-sm-6 flex-column d-flex">
@@ -190,6 +193,7 @@ const Booking = () => {
                       placeholder="Enter your phone number"
                       value={connect.phone}
                       onChange={handleinputs}
+                      required
                     />
                   </div>
                 </div>
@@ -206,6 +210,7 @@ const Booking = () => {
                       placeholder="Enter the date for appointment "
                       value={connect.date}
                       onChange={handleinputs}
+                      required
                     />
                   </div>
                   <div className="form-group col-sm-6 flex-column d-flex">
@@ -237,6 +242,7 @@ const Booking = () => {
                       className="text-dark"
                       value={connect.address}
                       onChange={handleinputs}
+                      required
                     />
                   </div>
                 </div>
@@ -246,7 +252,6 @@ const Booking = () => {
                     <button
                       type="submit"
                       className="btn-block  buttn"
-                      onClick={onSubmit}
                       style={{ backgroundColor: "#225a97" }}
                     >
                       Book Appointment
