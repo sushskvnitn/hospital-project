@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 const bcrypt = require("bcrypt");
 const {Doctor , Gallery , Review ,Ticker,Slot }  = require("../schema/userschema");
-const multer = require("multer");
+
 router.get("/doctors", (req, res) => {
     try {
         Doctor.find({}, (err, doctors) => {
@@ -103,19 +103,10 @@ if ( !username ||!email || !password) {
     console.log(error);
   }
 })
-const storage = multer.diskStorage({  
-  destination: function (req, file, cb) {
-    cb(null, 'public/images');
-  },
-  filename: function (req, file, cb) { 
-    cb(null,  Date.now()+file.originalname);
-  }
-})
-const upload = multer({ storage  })
 
-router.post('/addphoto',upload.single('Name') ,async (req, res) => {
-  let photo = (req.file) ? req.file.filename : null;
-  const { title, caption} = req.body;
+
+router.post('/addphoto' ,async (req, res) => {
+  const { title, caption,photo} = req.body;
   if ( !title || !caption ) {
     res.status(400).json({ msg: "Please fill all the fields" });
   }
@@ -180,7 +171,7 @@ router.post("/addslots", async (req, res) => {
     const data = new Slot({ 
       date,
       slots,
-     });
+     }); 
     const res = await data.save();
      res.send( "Slots created successfully" );
   } catch (error) {

@@ -32,7 +32,7 @@ const Gallary = () => {
           data['gallery'] && data['gallery'].map((item) => {
             return (
               <Gallarycard
-                imagesrc={'http://localhost:8000/public/images/'+item['photo']}
+                imagesrc={item['photo']}
                 title={item['title']}
                 desc={item['caption']}
                 date={item['date']}

@@ -1,33 +1,54 @@
 import React, { useState } from "react";
-import axios from "axios";
 const UploadImg = () => {
-  const [gallarytitle, setgallarytitle] = useState("");
-  const [file, setfile] = useState("");
-  const [description, setdescription] = useState("");
-  const uploadimg = (event) => {
-    setfile(event.target.files[0]);
-  };
-  const onsubmit = async (event) => {
-    event.preventDefault();
+  const [title, setgallarytitle] = useState("");
+  const [image, setImage] = useState("");
+  const [caption, setdescription] = useState("");
+  const [photo, setphotourl] = useState("");
+
+  const postDetails = () => {
     const data = new FormData();
-    data.append("Name", file);
-    data.append("title", gallarytitle);
-    data.append("caption", description);
-    try {
-     let response = await axios.post("/addphoto", data);
-      console.log(response);
+    data.append("file", image);
+    data.append("upload_preset", "hospital_gallary");
+    data.append("cloud_name", "hospitalpro");
+    fetch("https://api.cloudinary.com/v1_1/hospitalpro/image/upload", {
+      method: "post",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setphotourl(data.url);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
-      if (response.status === 200) {
-        alert("uploaded successfully");
-      }
-
-    } catch (error) {
-      console.error(error+"error");
-    }
-  }
+      fetch("/addphoto",{
+        method:"post",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          title,
+          caption,
+          photo
+      })
+      }).then(res=>res.json())
+      .then(data=>{
+        if(data.error){
+          console.log(data.error)
+        }
+        else{
+          window.alert("image uploaded successfully")
+          console.log(data)
+        }
+      }).catch(err=>{
+        console.log(err)
+      })
+  };
+ 
   return (
     <div className=" m-4 my-4 d-flex justify-content-center"  >
-      <form action="/addphoto" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
+      <div   style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
           image title
@@ -37,6 +58,8 @@ const UploadImg = () => {
           className="form-control"
           id="exampleFormControlInput1"
           placeholder="enter title for image"
+
+          value={title}
           onChange={(e) => setgallarytitle(e.target.value)}
         />
       </div>
@@ -49,6 +72,7 @@ const UploadImg = () => {
           id="exampleFormControlTextarea1"
           rows="2"
           placeholder="Enter description for image"
+          value={caption}
           onChange={(e) => setdescription(e.target.value)}
         />
       </div>
@@ -58,14 +82,16 @@ const UploadImg = () => {
           className="form-control"
           id="inputGroupFile02"
           name="Name"
-          onChange={uploadimg}
+          onChange={(e)=>{
+            setImage(e.target.files[0]) 
+           } }
         />
         <label className="input-group-text mt-1" htmlFor="inputGroupFile02">
-          Upload
+          Upload 
         </label>
       </div>
-      <button className="btn dark_blue text-white" onClick={onsubmit}  >submit</button>
-      </form>
+      <button className="btn dark_blue text-white" onClick={postDetails}  >submit</button>
+      </div>
     </div>
   );
 };

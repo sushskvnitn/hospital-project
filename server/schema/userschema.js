@@ -32,7 +32,7 @@ const GallerySchema = new mongoose.Schema({
             type: String,
             required: true,
       },
-       caption: {
+      caption: {
             type: String ,
             required: true,
       },
