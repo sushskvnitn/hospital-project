@@ -5,7 +5,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const Gallary = () => {
   const [data, setData] = useState("");
   const fetchimages = async(e) => {
-    const res = await fetch("/gallery", {
+    const res = await fetch("https://hospiserver.onrender.com/gallery", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

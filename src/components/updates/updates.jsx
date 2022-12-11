@@ -7,7 +7,7 @@ const Updates = () => {
   AOS.init();
   const [update, setupdate] = useState([]);
   useEffect(() => {
-    fetch("/getticker")
+    fetch("https://hospiserver.onrender.com/getticker")
       .then((res) => res.json())
       .then((data) => {
         data.reverse();
