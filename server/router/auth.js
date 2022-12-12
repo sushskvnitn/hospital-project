@@ -91,7 +91,7 @@ if ( !username ||!email || !password) {
     const isMatch = await bcrypt.compare(password, userlogin.password);
     const token = await userlogin.generateAuthToken();
     res.cookie("jwtoken", token, {
-      expires: new Date(Date.now() + 25892000000),
+      expires: new Date(Date.now() + 7200000),
       httpOnly: true,
     });
     if (!isMatch) {
@@ -115,8 +115,9 @@ router.post('/addphoto' ,authenticate,async (req, res) => {
       caption,
     });
     console.log(data);
-    const res = await data.save();
+     await data.save();
     res.json({ success: "image uploaded successfully" });
+    window.alert("image uploaded successfully");
 
   } catch (error) {
     console.log(error);
@@ -135,8 +136,8 @@ router.post('/addreview' ,async (req, res) => {
       name,
       rating
     });
-    const res = await data.save();
-    res.json({ success: "image uploaded successfully" });
+     data.save();
+    res.status(200).json({ success: "image uploaded successfully" });
 
   } catch (error) {
     console.log(error);
@@ -194,7 +195,7 @@ router.put("/decreaseslots", async (req, res) => {
     const data = await Slot.findOne({ _id: _id});
     if(data){
       const newslots = slots;
-      const res = await Slot.updateOne({ _id: _id }, { $set: { slots: newslots } });
+      await Slot.updateOne({ _id: _id }, { $set: { slots: newslots } });
       res.send( "Slots updated successfully" );
     } else {
       res.status(400).json({ msg: "Slots not found" });

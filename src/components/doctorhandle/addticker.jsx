@@ -32,8 +32,7 @@ const Addticker = () => {
             .then((res) => res.json())
             .then((data) => {
                   if (data.status === 422 || !data) {
-                  window.alert("invalid registration");
-                  console.log("invalid registration");
+                  window.alert("cannot add update");
                   } else {
                   window.alert("update added successfully");
                   console.log("update added successfully");
