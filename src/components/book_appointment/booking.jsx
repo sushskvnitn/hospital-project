@@ -28,6 +28,7 @@ const Booking = () => {
       },
     });
     const data = await res.json();
+    data.reverse();
     setslots(data[0].slots);
     setId(data[0]._id);
     if (!data) {
