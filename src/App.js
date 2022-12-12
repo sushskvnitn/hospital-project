@@ -18,6 +18,7 @@ import Conditions from "./components/conditionsTreated/Conditions";
 import Booking from "./components/book_appointment/booking";
 import Readmore from "./components/Testimonials/readmore";
 import { useEffect } from "react";
+
 function App() {
   
   const addslots = async () => {

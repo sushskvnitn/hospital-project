@@ -12,8 +12,7 @@ const Footer = () => {
 <footer className=" text-center text-white" style={{ backgroundColor:"#043d78"}}>
 <div className="container p-4">
     <div className="row">
-      <Link>
-      <img src={Photo} width="10%" alt="" /></Link>
+      
       <div className="col-lg-8 col-md-12 mb-4 mb-md-0">
         <h5 className="text-uppercase">description</h5>
 
@@ -35,7 +34,10 @@ const Footer = () => {
     </div>
   </div>
   <div className="container p-4 pb-0">
-    <section className="mb-4">
+ 
+    <section className=""> 
+    <Link className="bg-white p-4 rounded shadow float-right">
+      <img src={Photo} width="10%" alt="" /></Link>
       <a
         className="btn text-white  mx-3"
         style={{backgroundColor: "#3b5998"}}
