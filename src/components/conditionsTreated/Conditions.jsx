@@ -27,7 +27,7 @@ const Conditions = () => {
 
  <div className="row   text-center">
                     <h2 className=" text-center"> More Information </h2>
-                    <div className="col-md-5 offset-md-1 col-sm-6 equal-height  "  >
+                    <div className="col-md-4 offset-md-2 col-sm-6 equal-height  "  >
                         <div className="item blue_color card-shadow-cnd bg-light rounded" style={{height:"18rem"}}>
                             <i className="fas fa-scroll fs-2 m-2"  ></i>
                             <h4>Procedures</h4>
@@ -39,9 +39,9 @@ const Conditions = () => {
                             <p>Carpal Tunnel injections</p>
                         </div>
                     </div>
-                    <div className="col-md-5 col-sm-6 equal-height " >
-                        <div className="item blue_color card-shadow-cnd bg-light rounded" style={{height:"18rem"}}>
-                            <i className="fas fa-microscope fs-2 m-2"></i>
+                    <div className="col-md-5 col-sm-6 equal-height">
+                        <div className="item blue_color">
+                            <i className="fas fa-microscope"></i>
                             <h4>Laboratory tests</h4>
                             <p>
                             ANA & ANCA (immunofluorescence)
