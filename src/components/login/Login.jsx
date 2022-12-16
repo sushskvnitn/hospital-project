@@ -87,25 +87,25 @@ const Login = () => {
                               onChange={(e) => setPassword(e.target.value)}
                             />
                           </div>
+                          <button
+                        type="submit"
+                        className="btn  px-4 mt-1  "
+                        onClick={login}
+                        style={{backgroundColor: "#043d78", color: "white"}}>
+                        login
+                      </button>
                         </div>
                       </form>
                     </div>
                   </div>
                   <div className="col-md-5 ps-0 d-none d-md-block">
-                    <div className="form-right h-100  text-white ">
+                    <div className="form-right   text-white ">
                       <img
-                        className="img-fluid"
+                        className="img-fluid my-5 "
                         src="https://images.pexels.com/photos/249348/pexels-photo-249348.jpeg?auto=compress&cs=tinysrgb&w=600"
                         alt=""
                         srcSet=""
                       />
-                      <button
-                        type="submit"
-                        className="btn btn-primary px-4 mt-1  "
-                        onClick={login}
-                      >
-                        login
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -120,42 +120,3 @@ const Login = () => {
 
 export default Login;
 
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <form>
-<div className="form-outline mb-4">
-  <input
-    type="email"
-    className="form-control "
-    placeholder="Enter a valid username"
-    value ={user}
-    onChange={(e) => setUser(e.target.value)}
-  />
-</div> 
-<div className="form-outline mb-4">
-  <input
-    type="email"
-    className="form-control "
-    placeholder="Enter a valid email address"
-  />
-</div>
-<div className="form-outline mb-3">
-  <input
-    type="password"
-    className="form-control "
-    placeholder="Enter password"
-    value ={password}
-    onChange={(e) => setPassword(e.target.value)}
-  />
-</div>
-<div className="text-center text-lg-start mt-4 pt-2">
-  <button
-    type="button"
-    className="btn dark_blue text-white "
-    onClick={login}
-  >
-    Login
-  </button>
-</div>
-</form> */
-}
