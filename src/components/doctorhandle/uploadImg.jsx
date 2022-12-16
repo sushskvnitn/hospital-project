@@ -1,54 +1,32 @@
 import React, { useState } from "react";
+import axios from "axios";
 const UploadImg = () => {
-  const [title, setgallarytitle] = useState("");
-  const [image, setImage] = useState("");
-  const [caption, setdescription] = useState("");
-  const [photo, setphotourl] = useState("");
-
-  const postDetails = () => {
+  const [gallarytitle, setgallarytitle] = useState("");
+  const [file, setfile] = useState("");
+  const [description, setdescription] = useState("");
+  const onsubmit = async (event) => {
+    event.preventDefault();
     const data = new FormData();
-    data.append("file", image);
-    data.append("upload_preset", "hospital_gallary");
-    data.append("cloud_name", "hospitalpro");
-    fetch("https://api.cloudinary.com/v1_1/hospitalpro/image/upload", {
-      method: "post",
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setphotourl(data.url);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    data.append("Name", file);
+    data.append("title", gallarytitle);
+    data.append("caption", description);
+    try {
+     let response = await axios.post("/addphoto", data);
+      console.log(response);
 
-      fetch("/addphoto",{
-        method:"post",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          title,
-          caption,
-          photo
-      })
-      }).then(res=>res.json())
-      .then(data=>{
-        if(data.error){
-          console.log(data.error)
-        }
-        else{
-          window.alert("image uploaded successfully")
-          console.log(data)
-        }
-      }).catch(err=>{
-        console.log(err)
-      })
+      if (response.status === 200) {
+        alert("uploaded successfully");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
   };
  
   return (
     <div className=" m-4 my-4 d-flex justify-content-center"  >
-      <div   style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
+      <form action="/addphoto" method="post" encType="multipart/form-data " 
+       style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
           image title
@@ -59,7 +37,7 @@ const UploadImg = () => {
           id="exampleFormControlInput1"
           placeholder="enter title for image"
 
-          value={title}
+          value={gallarytitle}
           onChange={(e) => setgallarytitle(e.target.value)}
         />
       </div>
@@ -72,7 +50,7 @@ const UploadImg = () => {
           id="exampleFormControlTextarea1"
           rows="2"
           placeholder="Enter description for image"
-          value={caption}
+          value={description}
           onChange={(e) => setdescription(e.target.value)}
         />
       </div>
@@ -83,15 +61,15 @@ const UploadImg = () => {
           id="inputGroupFile02"
           name="Name"
           onChange={(e)=>{
-            setImage(e.target.files[0]) 
+            setfile(e.target.files[0]) 
            } }
         />
         <label className="input-group-text mt-1" htmlFor="inputGroupFile02">
           Upload 
         </label>
       </div>
-      <button className="btn dark_blue text-white" onClick={postDetails}  >submit</button>
-      </div>
+      <button className="btn dark_blue text-white" onClick={onsubmit}  >submit</button>
+      </form>
     </div>
   );
 };

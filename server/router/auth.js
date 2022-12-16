@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const authenticate = require("../middleware/authenticate");
+const multer = require("multer")
 const app = express();
 app.use(express.json());
 const bcrypt = require("bcrypt");
@@ -102,9 +103,18 @@ if ( !username ||!email || !password) {
     console.log(error);
   }
 })
-
-router.post('/addphoto' ,authenticate,async (req, res) => {
-  const { title, caption,photo} = req.body;
+const storage = multer.diskStorage({  
+  destination: function (req, file, cb) {
+    cb(null, 'public/images');
+  },
+  filename: function (req, file, cb) { 
+    cb(null,  Date.now()+file.originalname);
+  }
+})
+const upload = multer({ storage  })
+router.post('/addphoto',upload.single('Name') ,async (req, res) => {
+  let photo = (req.file) ? req.file.filename : null;
+  const { title, caption} = req.body;
   if ( !title || !caption ) {
     res.status(400).json({ msg: "Please fill all the fields" });
   }
