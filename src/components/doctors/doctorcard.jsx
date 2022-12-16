@@ -1,14 +1,16 @@
 import React from 'react'
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import AOS from 'aos';
 import {useNavigate} from 'react-router-dom'
 
 const DoctorCard = (props) => {
+  AOS.init();
   const navigate = useNavigate()
   const opendetails = () => {
-    navigate('/doctorscard/', {state: {name: props.name, desc: props.desc, experiance: props.experiance, education: props.education,interests: props.interests}})
+    navigate('/doctorscard/', {state: {name: props.name, desc: props.desc, experiance: props.experiance, education: props.education,interests: props.interests, email: props.email, website: props.website, address: props.address, achievement: props.achievement, image: props.image }})
   }
   return (
-    <div className=" m-3">
+    <div className=" m-3" data-aos="fade-right" data-aos-duration="500">
       <div className="card">
   <div className="bg-image hover-overlay img-hover-zoom--brightness ripple" data-mdb-ripple-color="light">
   <div className="img-hover-zoom">

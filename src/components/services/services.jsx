@@ -1,8 +1,10 @@
 import React from 'react'
 import "./services.css"
+import AOS from 'aos'
 const Services = () => {
+    AOS.init();
   return (
-    <div className="marn-top">
+    <div className="marn-top" data-aos="fade-down">
 
       <h1 className="text-center blue_color pt-4"> <b>Our Services</b> </h1> <br /> 
       <section className="we-offer-area text-center bg-gray">

@@ -1,11 +1,13 @@
 import React from 'react'
 import "./about.css"
 import { Link } from 'react-router-dom'
+import AOS from 'aos';
 const about = () => {
+  AOS.init();
   return (
     <div className="marn-top">
     <h1 className ="text-center blue_color pt-4"> <b> About us </b></h1>
-    <section className="about-section">
+    <section className="about-section " data-aos="fade-down" >
         <div className="container">
             <div className="row">                
                 <div className="content-column col-lg-6 col-md-12 col-sm-12 order-2">
@@ -24,15 +26,18 @@ const about = () => {
                 </div>
 
                 <div className="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div className="inner-column wow fadeInLeft">
+                    <div className="inner-column  fadeInLeft">
                       <div className="author-desc">
                         <h2>Dr. SALIL A. GANU</h2>
 <span>MBBS, MD (Medicine) <br />
 DM (Rheumatology and Clinical Immunology) <br />
 Post Doctoral Fellow (CMC Vellore) <br /> </span>
                       </div>
-                        <figure className="image-1"><a href="/" className="lightbox-image" data-fancybox="images"><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt=""/></a></figure>
-                     
+                      <div class="d-lg-none testimg"><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width="80%" className='img-fluid rounded imgtest'  alt=""/>
+                     </div>
+<div class="d-none d-lg-block"><figure className=""><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className='img-fluid' alt=""/></figure>
+                        </div>
+                        
                     </div>
                 </div>
               

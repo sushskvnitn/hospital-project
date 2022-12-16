@@ -35,6 +35,7 @@ const Login = () => {
   };
   return (
     <>
+    
       <div className="login-page bg-light marn-top">
         <div className="container">
           <div className="row">
@@ -114,7 +115,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </>
+       </>
   );
 };
 

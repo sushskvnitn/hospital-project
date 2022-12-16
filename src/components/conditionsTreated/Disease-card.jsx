@@ -1,10 +1,12 @@
 import React from 'react'
 import "./conditions.css"
+import AOS from 'aos'
 const Diseasecard = (props) => {
+  AOS.init();
   return (
     <div>
 
-<div className="container" >
+<div className="container" data-aos="flip-right">
   <div className="row">
         
     <input type="checkbox" id={props.to} style={{width:"20rem",backgroundColor: '#fff'}} />

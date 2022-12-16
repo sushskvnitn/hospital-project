@@ -1,11 +1,17 @@
 import React ,{ useState  }from 'react'
+import AOS from 'aos';
 const Addmessage = () => {
+  AOS.init();
   const [name, setname] = useState("");
   const [occupation, setoccupation] = useState("");
   const [review, setdescription] = useState("");
   const [rating, setrating] = useState();
   const onsubmit = async (event) => {
     event.preventDefault();
+    if(rating>5){
+      window.alert("rating should be less than 5");
+      return;
+    }
     const res = await fetch("/addreview", {
       method: "POST",
       headers: {
@@ -31,7 +37,8 @@ const Addmessage = () => {
 
   return (
     <> <h1 className="my-3 text-center"> <b> Add Review </b></h1>
-    <div className="Addmessage marn-top d-flex justify-content-center">
+    <div className="Addmessage marn-top d-flex justify-content-center"  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom"data-aos-duration="1000">
       <form action="/addreview" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
@@ -66,7 +73,7 @@ const Addmessage = () => {
           type="text"
           className="form-control"
           id="exampleFormControlInput1"
-          placeholder="write your review here"
+          placeholder="write your review here less than 200 letters "
           onChange={(e) => setdescription(e.target.value)}
         />
       </div>
@@ -78,7 +85,7 @@ const Addmessage = () => {
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="1"
-          placeholder="your rating for the hospital"
+          placeholder="your rating for the hospital out of 5"
           onChange={(e) => setrating(e.target.value)}
         />
       </div>

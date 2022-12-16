@@ -171,8 +171,8 @@ z-index: 1;
 background: orange;
 padding: 10px 15px;
 left: 96px;
-width: calc(100% - 152px);
-border-radius: 50px;
+width: calc(100% - 172px);
+border-radius: 30px;
 }
 .about-section .image-column .inner-column .author-desc h2{
 font-size: 21px;
@@ -245,3 +245,15 @@ transition: all 300ms ease;
 background-color: #191e34;
 color: #fff
 }
+.testimg {
+  display: inline-block;
+  position: relative;
+
+}
+.testimg:after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      bottom: 0; left: 0;
+      background: url(http://placehold.it/20x20/1) repeat;
+    }

@@ -1,7 +1,9 @@
 import React from 'react'
 import Diseasecard from './Disease-card'
 import "../services/services.css"
+import AOS from 'aos'
 const Conditions = () => {
+  AOS.init();
   return (
     <div className="Conditions marn-top " >
       <h1 className="text-center blue_color pt-4"> <b> Conditions Treated</b> </h1>
@@ -23,25 +25,23 @@ const Conditions = () => {
 
  </div>
 
- <div className="row our-offer-items less-carousel we-offer-area text-center">
-                    <div className="col-md-5 offset-md-1 col-sm-6 equal-height">
-                        <div className="item blue_color">
-                            <i className="fas fa-scroll"></i>
+ <div className="row   text-center">
+                    <h2 className=" text-center"> More Information </h2>
+                    <div className="col-md-5 offset-md-1 col-sm-6 equal-height  "  >
+                        <div className="item blue_color card-shadow-cnd bg-light rounded" style={{height:"18rem"}}>
+                            <i className="fas fa-scroll fs-2 m-2"  ></i>
                             <h4>Procedures</h4>
                             <p>
-                            Intra-articular injections
-                            </p>
-                            <p>
-                            Lip biopsy
+                            Intra-articular injections,Lip biopsy
                             </p>
                             <p>Nerve-muscle Biopsy</p>
                             <p>Trigger finger injections</p>
                             <p>Carpal Tunnel injections</p>
                         </div>
                     </div>
-                    <div className="col-md-5 col-sm-6 equal-height">
-                        <div className="item blue_color">
-                            <i className="fas fa-microscope"></i>
+                    <div className="col-md-5 col-sm-6 equal-height " >
+                        <div className="item blue_color card-shadow-cnd bg-light rounded" style={{height:"18rem"}}>
+                            <i className="fas fa-microscope fs-2 m-2"></i>
                             <h4>Laboratory tests</h4>
                             <p>
                             ANA & ANCA (immunofluorescence)
@@ -51,7 +51,7 @@ const Conditions = () => {
                             </p>
                             <p>ELISAs (ANCA, specific ANA antibodies, <br /> anticardiolipin antibodies)</p>
                             <p>Flowcytometry</p>
-
+                            
                         </div>
                     </div>
                     </div>

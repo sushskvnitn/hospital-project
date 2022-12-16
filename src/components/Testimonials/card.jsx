@@ -28,7 +28,7 @@ const card = (props) => {
         </div>
         
         <p className="px-xl-3 fs-5 fst-italic fw-lighter">
-          {props.description} <FormatQuoteIcon />
+          {props.description.slice(0, 200)} <FormatQuoteIcon />
         </p>
         <h5 className="mb-3">-{props.name}</h5>
         <ul className="list-unstyled d-flex justify-content-center mb-0 star_color"  >

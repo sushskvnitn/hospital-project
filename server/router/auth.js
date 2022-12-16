@@ -105,6 +105,7 @@ if ( !username ||!email || !password) {
 router.post('/addphoto' ,authenticate,async (req, res) => {
   const { title, caption,photo} = req.body;
   if ( !title || !caption || !photo ) {
+    console.log(req.body);
     res.status(400).json({ msg: "Please fill all the fields" });
   }
   try {
@@ -170,7 +171,7 @@ router.post("/addslots", async (req, res) => {
       date,
       slots,
      }); 
-    const res = await data.save();
+     await data.save();
      res.send( "Slots created successfully" );
   } catch (error) {
     console.log(error);
