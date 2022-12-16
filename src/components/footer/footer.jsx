@@ -5,17 +5,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GoogleIcon from '@mui/icons-material/Google';
 import Photo from "../../images/logo2.png";
 import { Link } from 'react-router-dom';
+import "./footer.css"
 const Footer = () => {
   return (
     <>
   
 <footer className=" text-center text-white" style={{ backgroundColor:"#043d78"}}>
 <div className="container p-4">
-<Link className="bg-white p-4 rounded shadow float-right">
+<Link className="bg-white p-3 p-md-4 rounded shadow float-right">
       <img src={Photo} width="10%" alt="" /></Link>
     <div className="row">
       
-      <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
+      <div className="col-lg-6 mt-5 mt-md-0 col-md-12 mb-4 mb-md-0">
         <h5 className="text-uppercase">description</h5>
 
         <p>
@@ -39,26 +40,26 @@ const Footer = () => {
  
     <section className="p-2"> 
       <a
-        className="btn text-white  mx-3"
+        className="btn text-white  mx-3 glow-text1"
         style={{backgroundColor: "#3b5998"}}
         href="#!"
         role="button"
         ><FacebookIcon/></a>
       <a
-        className="btn text-white  mx-3"
+        className="btn text-white  mx-3 glow-text2"
         style={{backgroundColor: "#55acee"}}
         href="#!"
         role="button"
         ><TwitterIcon/></a>
 
       <a
-        className="btn text-white  mx-3"
+        className="btn text-white  mx-3 glow-text3"
         style={{backgroundColor: "#dd4b39"}}
         href="#!"
         role="button"
         ><GoogleIcon/></a>
       <a
-        className="btn text-white  mx-3 "
+        className="btn text-white  mx-3 mt-4 mt-md-0 glow-text4"
         style={{backgroundColor: "#ac2bac"}}
         href="#!"
         role="button"
