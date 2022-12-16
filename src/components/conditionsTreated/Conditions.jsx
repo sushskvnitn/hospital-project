@@ -24,7 +24,7 @@ const Conditions = () => {
  </div>
 
  <div className="row our-offer-items less-carousel we-offer-area text-center">
-                    <div className="col-md-5 offset-md-1 col-sm-6 equal-height">
+                    <div className="col-md-4 offset-md-2 col-sm-6 equal-height">
                         <div className="item blue_color">
                             <i className="fas fa-scroll"></i>
                             <h4>Procedures</h4>
@@ -39,7 +39,7 @@ const Conditions = () => {
                             <p>Carpal Tunnel injections</p>
                         </div>
                     </div>
-                    <div className="col-md-5 col-sm-6 equal-height">
+                    <div className="col-md-4 col-sm-6 equal-height">
                         <div className="item blue_color">
                             <i className="fas fa-microscope"></i>
                             <h4>Laboratory tests</h4>
