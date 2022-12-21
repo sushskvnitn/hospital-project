@@ -114,7 +114,7 @@ function App() {
         <a
           className="btn rounded m-4 p-3 button_bottom  rounded-circle"
           href="tel:1800123456"
-          style={{ color: "white",backgroundColor:"#225a97" }}
+          style={{ color: "white",backgroundColor:"#225a97" ,zIndex:"10" }}
         >
           <CallIcon />
         </a>

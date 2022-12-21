@@ -1,11 +1,10 @@
-import React, { useState , useEffect} from "react";
+import React, { useState} from "react";
 import jspdf from "jspdf";
 import axios from "axios";
 
 import logo from "../../images/logo1.png";
 const Booking = () => {
   const [slots, setslots] = useState([]);
-  const [_id,setId] = useState();
   const [connect, connectdata] = useState({
     name: "",
     lname: "",
@@ -20,57 +19,75 @@ const Booking = () => {
     const value = e.target.value;
     connectdata({ ...connect, [name]: value });
   };
-  const getavailableslots = async () => {
-    const res = await fetch("/getslots", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    data.reverse();
-    setslots(data[0].slots);
-    setId(data[0]._id);
-    if (!data) {
-      console.log("slots not added");
-    } else {
-      console.log(" slots fetched Successfully");
+  // const getavailableslots = async () => {
+  //   const datetosearch = connect.date;
+  //   const res = await fetch("/getslots", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       date:datetosearch
+  //     })
+  //   });
+  //   const data = await res.json();
+  //   if (!data) {
+  //     console.log("slots not found");
+  //   } else {
+  //     setslots(data);
+  //     console.log(" slots fetched Successfully");
+  //   }
+  // };
+  const Checkdate =async () => {
+    //function to check date is avaialble or not if not then add date and slots
+    const date = connect.date;
+    try {
+      const res =await fetch("/checkdate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          date: date,
+        }),
+      });
+      const data = await res.json();
+      
+      if (!data) {
+        alert("slots not available for the date ");
+      } 
+    } catch (error) {
+      console.log(error);
     }
+   
   };
-  useEffect(() => {
-    getavailableslots();
-  }, []);
-
-  const reduceSlotsbyone = async () =>{
-        const newslots = slots - 1;
-        setslots(newslots);
-        const res = await fetch("/decreaseslots", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            _id: _id,
-            slots: newslots,
-          }),
-        });
-        const data = await res.json();
-        if (!data) {
-          console.log("slots not added");
-        }
+  const resetdata=()=>{
+    connectdata({
+        name: "",
+        lname: "",
+        address: "",
+        email: "",
+        phone: "",
+        date: "",
+        doctor: "",
+    })
   }
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     // eslint-disable-next-line no-unused-vars
     const { name, lname, address, email, phone, date, doctor } = connect;
-    reduceSlotsbyone();
+    if (!name || !lname || !address || !email || !phone || !date || !doctor) {
+      alert("please fill the data");
+    } else {
+    Checkdate();
+    // getavailableslots();
     if(slots>0){
       await axios
       .post("/sendmail", connect)
       .then((response) => alert("mail sent successfully !!"));
 
     const doc = new jspdf();
-    
     doc.setFontSize(8);
     doc.setFillColor(0,0,0);
     doc.rect(0, 0, 230, 40,'F');
@@ -116,6 +133,8 @@ const Booking = () => {
     }else{
       alert("Sorry, slots are full for today");
     }
+    resetdata();
+  }
    
   };
   return (

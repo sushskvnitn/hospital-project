@@ -6,6 +6,7 @@ app.use(express.json());
 const bcrypt = require("bcrypt");
 const {Doctor , Gallery , Review ,Ticker,Slot }  = require("../schema/userschema");
 
+
 router.get("/doctors", (req, res) => {
     try {
         Doctor.find({}, (err, doctors) => {
@@ -47,9 +48,6 @@ router.get("/getticker", (req, res) => {
         console.log(err);
     }
 });
-
-
-
 router.post("/register", async (req, res) => {
   const { name, email, password, cpassword } = req.body;
   if (!name || !email || !password || !cpassword) {
@@ -163,45 +161,51 @@ router.get('/gallery',async (req, res) => {
     console.log(error);
   }
 })
-
-router.post("/addslots", async (req, res) => {
+//post request to check date is avaialble or not if not then add date and slots
+router.post("/checkdate", async (req, res) => {
   const { date, slots } = req.body;
   try {
-    const data = new Slot({ 
-      date,
-      slots,
-     }); 
-     await data.save();
-     res.send( "Slots created successfully" );
-  } catch (error) {
-    console.log(error);
-  }
-});
-router.get("/getslots", async (req, res) => {
-  try {
-    Slot.find({}, (err, slots) => {
-      if (err) {
-        throw err;
+    
+    const data = await Slot.findOne({ date: date });
+    console.log(data);
+    if (data) {
+      //reduce slots by 1 slot 
+      const newslots = data.slots - 1;
+      if(newslots < 0){
+        return res.status(400).json({ msg: "No slots available" });
       }
-      res.send(slots);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-});
-router.put("/decreaseslots", async (req, res) => {
-  const { _id, slots } = req.body;
-  try {
-    const data = await Slot.findOne({ _id: _id});
-    if(data){
-      const newslots = slots;
-      await Slot.updateOne({ _id: _id }, { $set: { slots: newslots } });
-      res.send( "Slots updated successfully" );
-    } else {
-      res.status(400).json({ msg: "Slots not found" });
+      // eslint-disable-next-line no-unused-vars
+      const update = await Slot.findOneAndUpdate(
+        { date},
+        { slots: newslots }
+      );
+      res.send("Slot booked successfully");
+    }
+    else {
+      const data = new Slot({
+        date,
+        slots,
+      });
+      await data.save();
+      res.send("Date created successfully");
     }
   } catch (error) {
     console.log(error);
+  }
+});
+router.post("/getslots", async (req, res) => {
+  const date = req.body;
+  try {
+      const data = await Slot.findOne({ date });
+      if(data.status === "404"){
+       return res.send("No date found ");
+      }
+      if(data.slots<0){
+        return res.send("No slots Available for the date  ")
+      }
+
+  } catch (err) {
+    console.log(err);
   }
 });
 router.get("/doctorinfo",authenticate , (req, res) => {
