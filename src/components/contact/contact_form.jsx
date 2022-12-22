@@ -20,10 +20,8 @@ const Contact_form = () => {
       await axios
           .post("/sendmessage", userdata)
           .then((response) => alert("your message has been received!"));
-      
-      
     } catch (error) {
-      alert("invalid credentials");
+      alert("Error in sending message");
     }
   };
   return (

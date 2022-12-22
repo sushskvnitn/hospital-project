@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import jspdf from "jspdf";
 import axios from "axios";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../../images/logo1.png";
 const Booking = () => {
   const [connect, connectdata] = useState({
@@ -13,6 +13,8 @@ const Booking = () => {
     date: "",
     doctor: "",
   });
+  const [isverfied, setisverfied] = useState(false);
+  
   const handleinputs = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -125,6 +127,9 @@ const Booking = () => {
       }
     }
   };
+  function onChange(value) {
+    setisverfied(true);
+  }
   return (
     <div className="marn-top booking text-dark">
       <div className="container-fluid px-1 py-5 mx-auto">
@@ -256,11 +261,17 @@ const Booking = () => {
                 </div>
 
                 <div className="row justify-content-end">
+                  <ReCAPTCHA
+                   // sitekey="6Lflip0jAAAAAI6YSJttala0yKIYmwRLhd8IQlW6" // use this key for production 
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" //use this for local host 
+                    onChange={onChange}
+                  />
+
                   <div className="form-group col-sm-6">
                     <button
                       type="submit"
-                      className="btn-block  buttn"
-                      style={{ backgroundColor: "#225a97" }}
+                      className="btn-block btn buttn"
+                      style={ { backgroundColor: "#225a97"}} disabled={!isverfied}
                     >
                       Book Appointment
                     </button>

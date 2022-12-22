@@ -29,6 +29,8 @@ const UploadImg = () => {
       })
       if(data.status===400){
         alert("Error in uploading image");
+      }else if(data.status===200){
+        alert("image uploaded successfully");
       }
     }else{
       alert("Error in uploading image");
