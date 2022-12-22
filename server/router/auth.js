@@ -115,7 +115,6 @@ router.post('/addphoto' ,authenticate,async (req, res) => {
     console.log(data);
      await data.save();
     res.json({ success: "image uploaded successfully" });
-    window.alert("image uploaded successfully");
 
   } catch (error) {
     console.log(error);
@@ -163,25 +162,22 @@ router.get('/gallery',async (req, res) => {
 })
 //post request to check date is avaialble or not if not then add date and slots
 router.post("/checkdate", async (req, res) => {
-  const { date, slots } = req.body;
+  const { date } = req.body;
   try {
     
     const data = await Slot.findOne({ date: date });
-    console.log(data);
     if (data) {
       //reduce slots by 1 slot 
       const newslots = data.slots - 1;
-      if(newslots < 0){
-        return res.status(400).json({ msg: "No slots available" });
-      }
       // eslint-disable-next-line no-unused-vars
       const update = await Slot.findOneAndUpdate(
         { date},
         { slots: newslots }
       );
-      res.send("Slot booked successfully");
+      res.send(update);
     }
     else {
+      const slots = 20;
       const data = new Slot({
         date,
         slots,
@@ -197,13 +193,9 @@ router.post("/getslots", async (req, res) => {
   const date = req.body;
   try {
       const data = await Slot.findOne({ date });
-      if(data.status === "404"){
-       return res.send("No date found ");
+      if(data.slots<=0){
+        return res.send(data);
       }
-      if(data.slots<0){
-        return res.send("No slots Available for the date  ")
-      }
-
   } catch (err) {
     console.log(err);
   }

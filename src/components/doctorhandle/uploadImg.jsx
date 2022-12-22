@@ -3,25 +3,20 @@ const UploadImg = () => {
   const [title, setgallarytitle] = useState("");
   const [image, setImage] = useState("");
   const [caption, setdescription] = useState("");
-  const [photo, setphotourl] = useState("");
-  const postDetails = () => {
+  const postDetails = async() => {
     const data = new FormData();
     data.append("file", image);
     data.append("upload_preset", "hospital_gallary");
     data.append("cloud_name", "hospitalpro");
-    fetch("https://api.cloudinary.com/v1_1/hospitalpro/image/upload", {
+ const url = await fetch("https://api.cloudinary.com/v1_1/hospitalpro/image/upload", {
       method: "post",
       body: data,
     })
-      .then((res) => res.json())
-      .then((data) => {
-        setphotourl(data.url);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-      fetch("/addphoto",{
+    if(url.status===200){
+      const photodetails = await url.json();
+      const photo = photodetails.url;
+      
+     const data = await  fetch("/addphoto",{
         method:"post",
         headers:{
           "Content-Type":"application/json"
@@ -29,20 +24,17 @@ const UploadImg = () => {
         body:JSON.stringify({
           title,
           caption,
-          photo
+          photo,
       })
-      }).then(res=>res.json())
-      .then(data=>{
-        if(data.error){
-          console.log(data.error)
-        }
-        else{
-          window.alert("image uploaded successfully")
-          console.log(data)
-        }
-      }).catch(err=>{
-        console.log(err)
       })
+      if(data.status===400){
+        alert("Error in uploading image");
+      }
+    }else{
+      alert("Error in uploading image");
+    }
+    
+     
   };
  
   return (

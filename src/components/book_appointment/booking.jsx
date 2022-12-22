@@ -1,10 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import jspdf from "jspdf";
 import axios from "axios";
 
 import logo from "../../images/logo1.png";
 const Booking = () => {
-  const [slots, setslots] = useState([]);
   const [connect, connectdata] = useState({
     name: "",
     lname: "",
@@ -19,109 +18,65 @@ const Booking = () => {
     const value = e.target.value;
     connectdata({ ...connect, [name]: value });
   };
-  // const getavailableslots = async () => {
-  //   const datetosearch = connect.date;
-  //   const res = await fetch("/getslots", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       date:datetosearch
-  //     })
-  //   });
-  //   const data = await res.json();
-  //   if (!data) {
-  //     console.log("slots not found");
-  //   } else {
-  //     setslots(data);
-  //     console.log(" slots fetched Successfully");
-  //   }
-  // };
-  const Checkdate =async () => {
-    //function to check date is avaialble or not if not then add date and slots
-    const date = connect.date;
-    try {
-      const res =await fetch("/checkdate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          date: date,
-        }),
-      });
-      const data = await res.json();
-      
-      if (!data) {
-        alert("slots not available for the date ");
-      } 
-    } catch (error) {
-      console.log(error);
-    }
-   
-  };
-  const resetdata=()=>{
+  const resetdata = () => {
     connectdata({
-        name: "",
-        lname: "",
-        address: "",
-        email: "",
-        phone: "",
-        date: "",
-        doctor: "",
-    })
-  }
-  
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    // eslint-disable-next-line no-unused-vars
-    const { name, lname, address, email, phone, date, doctor } = connect;
-    if (!name || !lname || !address || !email || !phone || !date || !doctor) {
-      alert("please fill the data");
-    } else {
-    Checkdate();
-    // getavailableslots();
-    if(slots>0){
-      await axios
-      .post("/sendmail", connect)
-      .then((response) => alert("mail sent successfully !!"));
+      name: "",
+      lname: "",
+      address: "",
+      email: "",
+      phone: "",
+      date: "",
+      doctor: "",
+    });
+  };
 
+  const generatepdf = (slots) => {
+    console.log(slots);
     const doc = new jspdf();
     doc.setFontSize(8);
-    doc.setFillColor(0,0,0);
-    doc.rect(0, 0, 230, 40,'F');
+    doc.setFillColor(0, 0, 0);
+    doc.rect(0, 0, 230, 40, "F");
     doc.addImage(logo, "PNG", 90, 10, 40, 13);
-    doc.setTextColor(255,255,255);
-    doc.textWithLink("Go to our website",170, 35,{url: "https://hospitalpro.netlify.app/"});
+    doc.setTextColor(255, 255, 255);
+    doc.textWithLink("Go to our website", 170, 35, {
+      url: "https://hospitalpro.netlify.app/",
+    });
     doc.setFontSize(25);
     doc.setTextColor(255, 255, 255);
     doc.text("Appointment Letter", 75, 35);
     doc.setFontSize(13);
     doc.setTextColor(0, 0, 0);
-    doc.text("First Name: " + name, 20, 50);
-    doc.text("Last Name: " + lname, 20, 58);
-    doc.text("Address: " + address, 20, 66);
-    doc.text("Email: " + email, 20, 74);
-    doc.text("Phone: " + phone, 20, 82);
-    doc.text("Date: " + date, 20, 90);
-    doc.text("Doctor: " + doctor, 20, 98);
-    doc.text("Token number : " + (20 -slots), 20, 106);
+    doc.text("First Name: " + connect.name, 20, 50);
+    doc.text("Last Name: " + connect.lname, 20, 58);
+    doc.text("Address: " + connect.address, 20, 66);
+    doc.text("Email: " + connect.email, 20, 74);
+    doc.text("Phone: " + connect.phone, 20, 82);
+    doc.text("Date: " + connect.date, 20, 90);
+    doc.text("Doctor: " + connect.doctor, 20, 98);
+    doc.text("Token number : " + (20 - slots), 20, 106);
     doc.setFontSize(12);
     doc.text("Thank you for booking an appointment with us.", 20, 112);
     doc.setFillColor(255, 0, 0);
     doc.setTextColor(255, 0, 0);
-    doc.setDrawColor(4,61,120)
-    doc.setLineWidth(1);    
-    doc.line(0, 116, 240, 116);     
-    doc.text( "Note : Now you can go to the hospital with this appointment letter and show the appointment ",20,120);
-    doc.text( "letter to the Receptionist and follow the further procedure.", 30, 125);
-    doc.setLineWidth(1);    
-    doc.line(0, 126, 240, 126); 
+    doc.setDrawColor(4, 61, 120);
+    doc.setLineWidth(1);
+    doc.line(0, 116, 240, 116);
+    doc.text(
+      "Note : Now you can go to the hospital with this appointment letter and show the appointment ",
+      20,
+      120
+    );
+    doc.text(
+      "letter to the Receptionist and follow the further procedure.",
+      30,
+      125
+    );
+    doc.setLineWidth(1);
+    doc.line(0, 126, 240, 126);
     doc.setTextColor(0, 0, 0);
     doc.setFontSize(13);
-    doc.setFillColor(0,0,0)
-    doc.rect(0,250, 230, 40,'F');
+    doc.setFillColor(0, 0, 0);
+    doc.rect(0, 250, 230, 40, "F");
     doc.setTextColor(255, 255, 255);
     doc.text("Hospital Address ", 20, 255);
     doc.setFontSize(11);
@@ -130,12 +85,45 @@ const Booking = () => {
     doc.text("Nagpur-440010 ", 20, 270);
     doc.text("Phone: 0712- 254 0000 ", 20, 275);
     doc.save("appointment.pdf");
-    }else{
-      alert("Sorry, slots are full for today");
-    }
     resetdata();
-  }
-   
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line no-unused-vars
+    const { name, lname, address, email, phone, date, doctor } = connect;
+    if (!name || !lname || !address || !email || !phone || !date || !doctor) {
+      alert("please fill the data");
+    } else {
+      try {
+        const res = await fetch("/checkdate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            date: date,
+          }),
+        });
+        const data = await res.json();
+        console.log(data);
+        console.log(data.slots);
+        if (data.slots <= 0) {
+          alert("slots are full for the date ");
+          return;
+        }
+        generatepdf(data.slots);
+        try {
+          await axios
+            .post("/sendmail", connect)
+            .then((response) => alert("mail sent successfully !!"));
+        } catch (error) {
+          console.log("error in sending mail");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
   return (
     <div className="marn-top booking text-dark">
