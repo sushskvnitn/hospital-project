@@ -17,20 +17,12 @@ const card = (props) => {
         key={props.id}
 
       >
-        <div className="d-flex justify-content-center mb-4">
-          {/* <img
-            src={props.image}
-            className="rounded-circle shadow-1-strong"
-            alt="testimonials"
-            width="150"
-            height="150"
-          /> */}
-        </div>
-        
+       
+         
         <p className="px-xl-3 fs-5 fst-italic fw-lighter">
-          {props.description.slice(0, 200)} <FormatQuoteIcon />
+          {props.description.slice(0, 210)} <FormatQuoteIcon />
         </p>
-        <h5 className="mb-3">-{props.name}</h5>
+        <h5 className="mb-3 text-bottom">-{props.name}</h5>
         <ul className="list-unstyled d-flex justify-content-center mb-0 star_color"  >
           {new Array(Math.floor(props.rate)).fill(null).map(() => (
             <StarIcon />

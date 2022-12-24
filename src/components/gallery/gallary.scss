@@ -36,7 +36,7 @@ figure {
 			bottom: 0;
 		}
 	}
-	h1 {
+	h3 {
 		position: absolute;
 		top: 50px;
 		left: 20px;
@@ -46,7 +46,6 @@ figure {
 		border-radius: 10px;
 	
 		color: white;
-		font-size: 2rem;
 		font-weight: 100;
 		line-height: 1;
 	}
@@ -56,7 +55,7 @@ figure {
 	}
 	figcaption {
 		position: absolute;
-		bottom: -33%;
+		bottom: -28%;
 		left: 0;
 		width: 100%;
 		margin: 0;

@@ -1,6 +1,8 @@
 import React ,{ useState  }from 'react'
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 const Addmessage = () => {
+  const navigate = useNavigate();
   AOS.init();
   const [name, setname] = useState("");
   const [occupation, setoccupation] = useState("");
@@ -26,12 +28,12 @@ const Addmessage = () => {
     });
     const data = await res.json();
     if (res.status === 422 || !data) {
-      window.alert("invalid registration");
-      console.log("invalid registration");
+      window.alert("Error in adding review");
+
     }
     else {
       window.alert("review added successfully");
-      console.log("review added successfully");
+      navigate("/");
     }
   }
 
@@ -42,7 +44,7 @@ const Addmessage = () => {
       <form action="/addreview" method="post" encType="multipart/form-data" style={{ width:"60rem",backgroundColor: '#fff',padding:"20px",borderRadius: "10px",margin:"2rem"}}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          your name
+         Your name
         </label>
         <input
         type="text"

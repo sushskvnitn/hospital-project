@@ -5,15 +5,15 @@ const Gallary_card = (props) => {
     <>
  
       <figure class="image-block figure-css m-3">
-	<h1 className="px-2 text-uppercase">{props.title}</h1>
+	<h3 className="px-2 text-uppercase">{props.title}</h3>
 	<img src={props.imagesrc} alt="" />
 	<figcaption>
-		<h3>
+		<h5>
 			More Info
-		</h3>
+		</h5>
 		<p>{props.desc} </p>
 	</figcaption>
-</figure>
+</figure> 
     </>
   );
 };
