@@ -35,13 +35,20 @@ const Login = () => {
   };
   return (
     <>
-    
       <div className="login-page bg-light marn-top">
-        <div className="container">
-          <div className="row">
+        <div
+          className="container"
+          
+        >
+          <div className="row" >
             <div className="col-lg-10 offset-lg-1">
-              <h1 className="mb-3"> <b> Login </b></h1>
-              <div className="bg-white shadow rounded">
+              <h1 className="mb-3">
+                {" "}
+                <b>Doctor's Login </b>
+              </h1>
+              <div className="bg-white my-4 rounded" style={{
+boxShadow: "#000000 10px 8px 38px 5px"
+          }}>
                 <div className="row">
                   <div className="col-md-7 pe-0">
                     <div className="form-left h-100 py-5 px-5">
@@ -55,7 +62,7 @@ const Login = () => {
                               type="text"
                               className="form-control"
                               placeholder="Enter Username"
-                              value={user} 
+                              value={user}
                               onChange={(e) => setUser(e.target.value)}
                             />
                           </div>
@@ -89,12 +96,16 @@ const Login = () => {
                             />
                           </div>
                           <button
-                        type="submit"
-                        className="btn  px-4 mt-1  "
-                        onClick={login}
-                        style={{backgroundColor: "#043d78", color: "white"}}>
-                        login
-                      </button>
+                            type="submit"
+                            className="btn  px-4 mt-1  "
+                            onClick={login}
+                            style={{
+                              backgroundColor: "#043d78",
+                              color: "white",
+                            }}
+                          >
+                            login
+                          </button>
                         </div>
                       </form>
                     </div>
@@ -115,9 +126,8 @@ const Login = () => {
           </div>
         </div>
       </div>
-       </>
+    </>
   );
 };
 
 export default Login;
-

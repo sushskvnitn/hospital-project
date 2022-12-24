@@ -12,7 +12,6 @@ const Gallary_card = (props) => {
 			More Info
 		</h3>
 		<p>{props.desc} </p>
-		{	props.date}
 	</figcaption>
 </figure>
     </>

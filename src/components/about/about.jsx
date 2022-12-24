@@ -13,12 +13,16 @@ const about = () => {
                 <div className="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div className="inner-column">
                         <div className="sec-title">
-                            <span className="title">About Hospital Owner</span>
+                            <span className="title">About our Hospital</span>
                             <h2> Medicines cure diseases, but only doctors can cure patients </h2>
                         </div>
-                        <div className="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, eaque similique. Molestias deleniti qui inventore possimus incidunt blanditiis neque nisi sit, facilis quam ipsa, totam laudantium ex sint recusandae quasi reprehenderit aperiam!</div>
+                        <div className="text">Starting on the first working day of year 2023, this new venture Sanjeevan Advanced Rheumatology Centre inherits it’s spirit from our beloved Sanjeevan hospital,
+                         Latur that has tried it’s best to cater to the healthcare needs of not just the town of Latur, but the entire region of Marathwada and north-east Karnataka for last 3 decades. </div>
                       <div className="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nam. Dolor facilis, aliquid dignissimos error repellat quos recusandae numquam amet minima aliquam pariatur deleniti praesentium quia sapiente nisi veritatis debitis ea beatae delectus, laudantium quasi necessitatibus officia! Odit esse tempora quia pariatur eos error.  </div>
+                      Keeping our principle of providing a compassionate care to the needy, we also aim to be a full-fledged rheumatology centre that should be capable of providing all-round rheumatology and immunology related services to the Nagpur and greater central India region.  </div>
+                      <div className="text"> 
+ To achieve this aim, we believe in collaborating with national and international masters in the field and to enhance the knowledge through collaborative clinical 
+ research giving as much importance as we give to attaining top quality patient care. Afterall, the most effective way by which a sincere doctor can help his/ her own patients is by achieving the cutting edge knowledge about the disease and it’s management ! </div>
                         <div className="btn-box">
                             <Link to="/contactus" className="btn dark_blue text-white ">Contact Us</Link>
                         </div>
@@ -43,21 +47,18 @@ Post Doctoral Fellow (CMC Vellore) <br /> </span>
               
             </div>
            <div className="sec-title marn-top">
-                            <span className="title marn-top">Our Future Goal</span>
+                            <span className="title marn-top">Our vision for future</span>
                             <h2>We want to lead in Rheumatology </h2>
                         </div>
           <div className="text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem consectetur sequi vero pariatur possimus rerum, ad accusamus dignissimos, cumque quo aut alias reiciendis sed, provident perferendis cupiditate eos consequuntur quod vel! Aliquam!
-              </div>
+          To build a prime institute that is a leader in central India in rheumatology 
+          and immunology related patient care and medical research. 
+          </div>
+          <div className="text">
+          No one from this region should need to travel elsewhere for
+           management of these diseases !</div>
                <div className="text">
-             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus unde qui, non accusamus aliquam distinctio harum ducimus tempora cumque vel ea reiciendis?  </div>
-               <div className="text">                
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint voluptatibus deserunt quae modi facilis quidem fuga suscipit, neque minus excepturi, eos aliquid non.           </div>
-               <div className="text">
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum libero animi ratione reprehenderit laboriosam possimus quos ipsa assumenda deserunt, rerum necessitatibus pariatur.  </div>
-               <div className="text">
-                
-In the end, I would say keep visiting our website and enjoy the quality content.
+In the end, I would say keep visiting our website and Stay updated.
               </div>
         </div>
     </section>
