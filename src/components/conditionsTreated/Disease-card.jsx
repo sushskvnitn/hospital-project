@@ -6,7 +6,7 @@ const Diseasecard = (props) => {
   AOS.init();
 
 
-  const withBreaks =props.backdescription.split("•").map((item, i) => { return <Fragment className="mx-2" key={i}>{item} <br /></Fragment> });
+  const withBreaks =props.backdescription.split("•").map((item, i) => { return <Fragment  key={i}>{item} <br /></Fragment> });
   return (
     <div>
 

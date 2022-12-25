@@ -26,10 +26,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar_color sticky-top  " >
-        <div className="container-fluid ">
-          <Link className="navbar-brand  header_text" to="/"  onClick={collapseNav} >
-            <img width="80" height="50" className="d-inline-block align-top " src={Photo} alt="" srcSet="" />
+       <Link className="navbar-brand mx-3" to="/"  onClick={collapseNav} >
+            <img width="100" height="70" className="d-inline-block align-top " src={Photo} alt="" srcSet="" />
           </Link>
+        <div className="container-fluid ">
+         
           <button
                ref={navButton}
             className="navbar-toggler "
