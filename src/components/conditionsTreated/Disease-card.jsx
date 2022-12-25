@@ -33,7 +33,7 @@ const Diseasecard = (props) => {
             <p    >
             {withBreaks}
             </p>
-            <a href={props.link} className="btn btn-warning btn-end btn-sm">more</a>
+            <a href={props.link} target="_blank" rel=" noreferrer"className="btn btn-warning btn-end btn-sm">more</a>
           </div>
         </div>
       </div>

@@ -15,15 +15,19 @@ const card = (props) => {
         data-aos="flip-left"
         data-aos-duration="2000"
         key={props.id}
-
       >
-       
-         
-        <p className="px-xl-3 fs-5 fst-italic fw-lighter">
+      <div className="text-center " >
+         <img alt="img" height="76" width="76" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-testimonials-resume-flaticons-lineal-color-flat-icons.png" style={{
+            filter: "saturate(100%) brightness(90%) contrast(100%)",
+         }}  />
+      </div>
+       <p className="px-xl-3 fs-5 fst-italic fw-lighter">
           {props.description.slice(0, 210)} <FormatQuoteIcon />
         </p>
-        <h5 className="mb-3 text-bottom">-{props.name}</h5>
-        <ul className="list-unstyled d-flex justify-content-center mb-0 star_color"  >
+        <figcaption class="blockquote-footer">
+  {props.name}
+  </figcaption>
+          <ul className="list-unstyled d-flex justify-content-center mb-0 star_color"  >
           {new Array(Math.floor(props.rate)).fill(null).map(() => (
             <StarIcon />
           ))}

@@ -35,9 +35,7 @@ const Testimonials = () => {
             <br />
             <h3 className="mb-4 "> <b>Testimonials</b> </h3>
             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              error amet numquam iure provident voluptate esse quasi, veritatis
-              totam voluptas nostrum quisquam eum porro a pariatur veniam.
+             Our patients are our best advertisement. We are proud of the care we provide and the relationships we build with our patients. We invite you to read what our patients have to say about their experiences with us.
             </p>
           </div>
         </div>

@@ -1,7 +1,5 @@
 import React ,{ useState,useEffect} from "react";
 import Gallarycard from "./Gallary_card";
-import { Link } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const Gallary = () => {
   const [data, setData] = useState("");
   const fetchimages = async(e) => {
@@ -18,13 +16,9 @@ const Gallary = () => {
   useEffect(() => {
     fetchimages();
   }, []);
-
-     
   return (
     <div className="marn-top" >
-      <Link className="btn navbar_color text-dark mx-4 my-2" to="/">
-        <ArrowBackIcon />
-      </Link>
+
       <h1 className="text-center blue_color"> <b> Gallery </b></h1>
       <div className=" d-flex justify-content-center  flex-wrap px-2">
          

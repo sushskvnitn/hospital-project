@@ -197,7 +197,7 @@
     }
     
     .we-offer-area.text-center .item:hover i {
-      background-color: #ffffff !important;
+      background-color: #043d78  !important;
       color: #043d78 !important;
     }
     
@@ -230,3 +230,9 @@
       top: -10px;
       width: 120px;
     }
+
+    .invert{
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+ 

@@ -30,7 +30,7 @@ const Doctorspage = () => {
                     <h3> <b>
                     DR. {location.state.name} </b>
                     </h3>
-                    <div> <b>Works at Sanjeevan </b>  </div>
+                    <div> <b>{location.state.subdesc} </b>  </div>
                   </div>
                 </div>
               </div>
