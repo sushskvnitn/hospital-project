@@ -118,8 +118,11 @@ const Booking = () => {
         generatepdf(data.slots);
         try {
           await axios
-            .post("/sendmail", connect)
-            .then((response) => alert("mail sent successfully !!"));
+            .post("https://sheet.best/api/sheets/a001a780-b40c-44aa-bd4c-14957f20bc97", connect)
+            .then((response) => {
+              alert("Booking Done successfully !!")
+            });
+              
         } catch (error) {
           console.log("error in sending mail");
         }
