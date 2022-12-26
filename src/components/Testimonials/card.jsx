@@ -19,7 +19,7 @@ const card = (props) => {
       <div className="text-center " >
          <img alt="img" height="76" width="76" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-testimonials-resume-flaticons-lineal-color-flat-icons.png" style={{
             filter: "saturate(100%) brightness(90%) contrast(100%)",
-         }}  />
+         }}  /> 
       </div>
        <p className="px-xl-3 fs-5 fst-italic fw-lighter">
           {props.description.slice(0, 210)} <FormatQuoteIcon />

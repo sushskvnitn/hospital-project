@@ -17,51 +17,11 @@ import Resouces from "./components/patientResources/Resouces";
 import Conditions from "./components/conditionsTreated/Conditions";
 import Booking from "./components/book_appointment/booking";
 import Readmore from "./components/Testimonials/readmore";
-import { useEffect } from "react";
+import ReadmoreService from "./components/services/ReadmoreServices";
 
 function App() {
   
-  const addslots = async () => {
-    const res = await fetch("/addslots", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        date: Date.now(),
-        slots: 20,
-      }),
-    });
-    const data = await res.json();
-    if (!data) {
-      window.alert("slots not added");
-      console.log("slots not added");
-    } else {
-      window.alert("slots added Successfully");
-      console.log(" slots added Successfully");
-    }
-  };
-  function resetAtMidnight() {
-    var now = new Date();
-    var night = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate() + 1, // the next day, ...
-      0,
-      0,
-      0 // ...at 00:00:00 hours
-    );
-    var msToMidnight = night.getTime() - now.getTime();
-
-    setTimeout(function () {
-      addslots(); //      <-- This is the function being called at midnight.
-      resetAtMidnight(); //      Then, reset again next midnight.
-    }, msToMidnight);
-  }
-  useEffect(() => {
-    resetAtMidnight();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  
  
   return (
     <BrowserRouter>
@@ -105,6 +65,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/conditions" element={<Conditions />} />
+      </Routes>
+      <Routes>
+        <Route path="/readmoreservice" element={<ReadmoreService />} />
       </Routes>
       <Routes>
         <Route path="/resouces" element={<Resouces />} />

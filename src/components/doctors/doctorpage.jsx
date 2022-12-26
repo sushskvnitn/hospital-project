@@ -5,6 +5,8 @@ import AOS from 'aos'
 const Doctorspage = () => {
   AOS.init();
   const location = useLocation();
+  const withBreaks =location.state.experiance.split("•").map((item, i) => { return <li  key={i}>{item} <br /></li> });
+ 
   return (
     <div className="marn-top">
       <div >
@@ -41,7 +43,7 @@ const Doctorspage = () => {
             <div className="col-sm-6 ">
             <div className="panel bg-light  border-bottom-blue">
                   <div className="panel-heading dark_blue text-white">
-                    <h3 className="mx-4">User Info</h3>  
+                    <h3 className="mx-4">Doctor Info</h3>  
                   </div>
                   <div className="panel-body">
                     <div className="body-section mx-4">
@@ -49,23 +51,21 @@ const Doctorspage = () => {
                       <h5 className="section-content">DR. {location.state.name}</h5>
                     </div>
                     <div className="body-section mx-4">
-                      <h4 className="section-heading">Address</h4>
+                    {location.state.address ? <div>
+                       <h4 className="section-heading"><b>Address</b> </h4>
                       <h5 className="section-content">
-                      {location.state.address}
+                      { location.state.address}
                       </h5>
+                    </div> :""}
                     </div>
-                    <div className="body-section mx-4">
-                      <h4 className="section-heading">Telephone</h4>
-                      <h5 className="section-content">(123) 456 - 7890</h5>
-                    </div>
-                    <div className="body-section mx-4">
+                    {location.state.email?<div className="body-section mx-4">
                       <h4 className="section-heading">Email</h4>
                       <h5 className="section-content">{location.state.email}</h5>
-                    </div>
-                    <div className="body-section mx-4">
+                    </div> :""}
+                    {location.state.website?<div className="body-section mx-4">
                       <h4 className="section-heading">Website</h4>
                       <h5 className="section-content">{ location.state.website }</h5>
-                    </div>
+                    </div> :""}
                   </div>
                 </div>
               </div>
@@ -78,10 +78,9 @@ const Doctorspage = () => {
                   </div>
                   <div className="panel-body">
                     <div className="body-section mx-4">
-                      <h4 className="section-heading">About</h4>
-                      <h5 className="section-content">{location.state.desc}</h5>
+                      <h4 className="section-heading">Experience</h4>
+                      <h5 className="section-content">{withBreaks}</h5>
                     </div>
-                    
                     <div className="body-section mx-4">
                       <h4 className="section-heading">Acheivements</h4>
                       <h5 className="section-content">

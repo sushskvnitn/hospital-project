@@ -30,6 +30,7 @@ const Booking = () => {
       date: "",
       doctor: "",
     });
+    setisverfied(false);
   };
 
   const generatepdf = (slots) => {
