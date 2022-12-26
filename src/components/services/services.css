@@ -236,3 +236,10 @@
         filter: invert(100%);
     }
  
+
+    .we-offer-area .item .read{
+      color: #043d78;
+    }
+    .we-offer-area .item:hover .read{
+      color: #fff;
+    }
