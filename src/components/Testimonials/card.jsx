@@ -24,7 +24,7 @@ const card = (props) => {
        <p className="px-xl-3 fs-5 fst-italic fw-lighter">
           {props.description.slice(0, 210)} <FormatQuoteIcon />
         </p>
-        <figcaption class="blockquote-footer">
+        <figcaption className="blockquote-footer">
   {props.name}
   </figcaption>
           <ul className="list-unstyled d-flex justify-content-center mb-0 star_color"  >

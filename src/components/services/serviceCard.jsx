@@ -23,7 +23,7 @@ const ServiceCards = (props) => {
           {/* readmore button here and
         add a link to the service page */}
         <div className="d-flex justify-content-end">
-         {props.description.length > 395 ? <div  onClick={openreadmore} class="text-end nav-link text-dark">Readmore</div> : ""}
+         {props.description.length > 395 ? <u  onClick={openreadmore} className="text-end nav-link text-dark" style={{ cursor: "pointer" }}  >Readmore</u> : ""}
         </div>
         </div>
       </div>

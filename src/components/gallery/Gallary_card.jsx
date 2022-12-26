@@ -4,7 +4,7 @@ const Gallary_card = (props) => {
   return (
     <>
  
-      <figure class="image-block figure-css m-3">
+      <figure className="image-block figure-css m-3">
 	<h3 className="px-2 text-uppercase">{props.title}</h3>
 	<img src={props.imagesrc} alt="" />
 	<figcaption>

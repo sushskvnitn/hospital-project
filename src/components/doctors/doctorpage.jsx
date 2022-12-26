@@ -6,7 +6,8 @@ const Doctorspage = () => {
   AOS.init();
   const location = useLocation();
   const withBreaks =location.state.experiance.split("•").map((item, i) => { return <li  key={i}>{item} <br /></li> });
- 
+   const edubrake =location.state.education.split("•").map((item, i) => { return <li  key={i}>{item} <br /></li> });
+ const achievement =location.state.achievement.split("•").map((item, i) => { return <li  key={i}>{item} <br /></li> });
   return (
     <div className="marn-top">
       <div >
@@ -57,6 +58,18 @@ const Doctorspage = () => {
                       { location.state.address}
                       </h5>
                     </div> :""}
+                    {location.state.education ? <div>
+                       <h4 className="section-heading"><b>Education</b> </h4>
+                      <h5 className="section-content">
+                      {edubrake}
+                      </h5>
+                    </div> :""}
+                     {location.state.interests ? <div>
+                       <h4 className="section-heading"><b>Interests</b> </h4>
+                      <h5 className="section-content">
+                      {location.state.interests}
+                      </h5>
+                    </div> :""}
                     </div>
                     {location.state.email?<div className="body-section mx-4">
                       <h4 className="section-heading">Email</h4>
@@ -69,8 +82,6 @@ const Doctorspage = () => {
                   </div>
                 </div>
               </div>
-
-
               <div className="col-sm-6">
                 <div className="panel bg-light  border-bottom-blue">
                   <div className="panel-heading dark_blue text-white">
@@ -82,9 +93,9 @@ const Doctorspage = () => {
                       <h5 className="section-content">{withBreaks}</h5>
                     </div>
                     <div className="body-section mx-4">
-                      <h4 className="section-heading">Acheivements</h4>
+                      <h4 className="section-heading">Research Publications </h4>
                       <h5 className="section-content">
-                        {location.state.achievement}
+                        {achievement}
                       </h5>
                     </div>
                   </div>

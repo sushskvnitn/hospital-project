@@ -62,11 +62,10 @@ app.post('/sendmail', (req, res) =>{
       const TranEmailApi =new Sib.TransactionalEmailsApi();
       const sender ={
            email: process.env.EMAIL,
-           name: "email service "
+           name: "Sanjeevan Advanced Rheumatology CARE"
       }
       const receiver =[{
             email: "4kstatus.ssk@gmail.com",
-
            }]
        TranEmailApi.sendTransacEmail({
            sender,

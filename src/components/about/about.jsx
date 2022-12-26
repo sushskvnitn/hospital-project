@@ -37,9 +37,9 @@ const about = () => {
 DM (Rheumatology and Clinical Immunology) <br />
 Post Doctoral Fellow (CMC Vellore) <br /> </span>
                       </div>
-                      <div class="d-lg-none testimg"><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width="80%" className='img-fluid rounded imgtest'  alt=""/>
+                      <div className="d-lg-none testimg"><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width="80%" className='img-fluid rounded imgtest'  alt=""/>
                      </div>
-<div class="d-none d-lg-block"><figure className=""><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className='img-fluid' alt=""/></figure>
+<div className="d-none d-lg-block"><figure className=""><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className='img-fluid' alt=""/></figure>
                         </div>
                         
                     </div>
