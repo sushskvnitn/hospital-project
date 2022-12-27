@@ -1,0 +1,22 @@
+name: Deploying to the Server
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Update the source code
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script_stop: true
+          script: |
+            cd app
+            chmod 755 script.sh
+            bash script.sh

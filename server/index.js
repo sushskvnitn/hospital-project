@@ -1,36 +1,40 @@
-const express = require('express')
-const cookieParser = require('cookie-parser')
+const express = require("express");
+const cookieParser = require("cookie-parser");
 const app = express();
-app.use(cookieParser())
-const dotenv =require("dotenv");
-dotenv.config({path: './config.env'});
+app.use(cookieParser());
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 8000;
+app.use(express.static("build"));
 require("./schema/userschema");
-require('./db/connect');
-app.use("/public", express.static('public'));
+require("./db/connect");
+app.use("/public", express.static("public"));
 app.use(express.json());
 app.use(require("./router/auth"));
 
-const Sib = require('sib-api-v3-sdk');
+const Sib = require("sib-api-v3-sdk");
 const Client = Sib.ApiClient.instance;
-const apiKey = Client.authentications['api-key'];
+const apiKey = Client.authentications["api-key"];
 apiKey.apiKey = process.env.PASS;
 
-app.post('/sendmessage', (req, res) =>{
-      const TranEmailApi =new Sib.TransactionalEmailsApi();
-      const sender ={
-             email: process.env.EMAIL,
-             name: "Sanjeevan Advanced Rheumatology CARE"
-      }
-      const receiver =[{
-            email: "4kstatus.ssk@gmail.com",
-      }]
-      TranEmailApi.sendTransacEmail({
-            sender,
-            to: receiver,
-            subject : " Sanjeevan Advanced Rheumatology CARE -Message from user ",
-            textContent: " Sanjeevan Advanced Rheumatology CARE -Message from user ",
-            htmlContent:`
+app.post("/sendmessage", (req, res) => {
+	const TranEmailApi = new Sib.TransactionalEmailsApi();
+	const sender = {
+		email: process.env.EMAIL,
+		name: "Sanjeevan Advanced Rheumatology CARE",
+	};
+	const receiver = [
+		{
+			email: "4kstatus.ssk@gmail.com",
+		},
+	];
+	TranEmailApi.sendTransacEmail({
+		sender,
+		to: receiver,
+		subject: " Sanjeevan Advanced Rheumatology CARE -Message from user ",
+		textContent:
+			" Sanjeevan Advanced Rheumatology CARE -Message from user ",
+		htmlContent: `
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif"><head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1" name="viewport"><meta name="x-apple-disable-message-reformatting"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta content="telephone=no" name="format-detection"><title>New Template</title><!--[if (mso 16)]>
  <style type="text/css"> a {text-decoration: none;}</style>
  <body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0"><div class="es-wrapper-color" style="background-color:#FAFAFA"><!--[if gte mso 9]><v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t"> <v:fill type="tile" color="#fafafa"></v:fill> </v:background><![endif]--><table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#FAFAFA"><tr><td valign="top" style="padding:0;Margin:0"><table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"><tr><td align="center" style="padding:0;Margin:0"><table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px" bgcolor="#FFFFFF"><tr><td align="left" style="padding:20px;Margin:0"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" valign="top" style="padding:0;Margin:0;width:560px"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" class="es-infoblock" style="padding:0;Margin:0;line-height:14px;font-size:12px;color:#CCCCCC"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:14px;color:#CCCCCC;font-size:12px"><a target="_blank" href="" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">View online version</a></p>
@@ -53,26 +57,29 @@ app.post('/sendmessage', (req, res) =>{
  </tr></table><table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"><tr><td align="center" style="padding:0;Margin:0"><table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px" bgcolor="#FFFFFF"><tr><td align="left" style="padding:20px;Margin:0"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" valign="top" style="padding:0;Margin:0;width:560px"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" style="padding:0;Margin:0;display:none"></td>
  </tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></div><pwa-extension-ng-components style="font-weight:normal;font-family:'Overpass Regular', sans-serif;font-size:14px"><pwa-root-extension-component ng-version="13.3.9"><pwa-in-app-message></pwa-in-app-message></pwa-root-extension-component><!----></pwa-extension-ng-components></body></html>
             `,
-        }).then(res.send("mail")).catch(console.log);
- });
- 
-app.post('/sendmail', (req, res) =>{
+	})
+		.then(res.send("mail"))
+		.catch(console.log);
+});
 
-      
-      const TranEmailApi =new Sib.TransactionalEmailsApi();
-      const sender ={
-           email: process.env.EMAIL,
-           name: "Sanjeevan Advanced Rheumatology CARE"
-      }
-      const receiver =[{
-            email: "4kstatus.ssk@gmail.com",
-           }]
-       TranEmailApi.sendTransacEmail({
-           sender,
-           to: receiver,
-           subject : " Sanjeevan Advanced Rheumatology CARE -appointment booking",
-           textContent: " Sanjeevan Advanced Rheumatology CARE -appointment booking",
-           htmlContent:`
+app.post("/sendmail", (req, res) => {
+	const TranEmailApi = new Sib.TransactionalEmailsApi();
+	const sender = {
+		email: process.env.EMAIL,
+		name: "Sanjeevan Advanced Rheumatology CARE",
+	};
+	const receiver = [
+		{
+			email: "4kstatus.ssk@gmail.com",
+		},
+	];
+	TranEmailApi.sendTransacEmail({
+		sender,
+		to: receiver,
+		subject: " Sanjeevan Advanced Rheumatology CARE -appointment booking",
+		textContent:
+			" Sanjeevan Advanced Rheumatology CARE -appointment booking",
+		htmlContent: `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif"><head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1" name="viewport"><meta name="x-apple-disable-message-reformatting"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta content="telephone=no" name="format-detection"><title>New Template</title><!--[if (mso 16)]>
 <style type="text/css"> a {text-decoration: none;}</style>
 <body style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0"><div class="es-wrapper-color" style="background-color:#FAFAFA"><!--[if gte mso 9]><v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t"> <v:fill type="tile" color="#fafafa"></v:fill> </v:background><![endif]--><table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#FAFAFA"><tr><td valign="top" style="padding:0;Margin:0"><table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"><tr><td align="center" style="padding:0;Margin:0"><table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px" bgcolor="#FFFFFF"><tr><td align="left" style="padding:20px;Margin:0"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" valign="top" style="padding:0;Margin:0;width:560px"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" class="es-infoblock" style="padding:0;Margin:0;line-height:14px;font-size:12px;color:#CCCCCC"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:14px;color:#CCCCCC;font-size:12px"><a target="_blank" href="" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">View online version</a></p>
@@ -95,10 +102,11 @@ app.post('/sendmail', (req, res) =>{
 </tr></table><table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"><tr><td align="center" style="padding:0;Margin:0"><table class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px" bgcolor="#FFFFFF"><tr><td align="left" style="padding:20px;Margin:0"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" valign="top" style="padding:0;Margin:0;width:560px"><table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><td align="center" style="padding:0;Margin:0;display:none"></td>
 </tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></div><pwa-extension-ng-components style="font-weight:normal;font-family:'Overpass Regular', sans-serif;font-size:14px"><pwa-root-extension-component ng-version="13.3.9"><pwa-in-app-message></pwa-in-app-message></pwa-root-extension-component><!----></pwa-extension-ng-components></body></html>
            `,
-       }).then(res.send("mail")).catch(console.log);
+	})
+		.then(res.send("mail"))
+		.catch(console.log);
 });
 
 app.listen(PORT, () => {
-      console.log(`Server listening on port ${PORT}`)
-      }
-)
+	console.log(`Server listening on port ${PORT}`);
+});
