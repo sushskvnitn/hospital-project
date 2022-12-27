@@ -8,6 +8,8 @@ const Addmessage = () => {
   const [occupation, setoccupation] = useState("");
   const [review, setdescription] = useState("");
   const [rating, setrating] = useState();
+  // eslint-disable-next-line no-unused-vars
+  const [view, setview] = useState(false);
   const onsubmit = async (event) => {
     event.preventDefault();
     if(rating>5){
@@ -24,6 +26,7 @@ const Addmessage = () => {
         occupation,
         review,
         rating,
+        view
       }),
     });
     const data = await res.json();

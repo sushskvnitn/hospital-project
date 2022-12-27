@@ -121,7 +121,7 @@ router.post('/addphoto' ,authenticate,async (req, res) => {
   }
 });
 router.post('/addreview' ,async (req, res) => {
-  const { occupation, review, name, rating} = req.body;
+  const { occupation, review, name, rating,view} = req.body;
   console.log(req.body);
   if ( !occupation || !review || !name || !rating ){
     res.status(400).json({ msg: "Please fill all the fields" });
@@ -131,7 +131,8 @@ router.post('/addreview' ,async (req, res) => {
       occupation,
       review,
       name,
-      rating
+      rating,
+      view
     });
      data.save();
     res.status(200).json({ success: "image uploaded successfully" });
@@ -162,13 +163,13 @@ router.get('/gallery',async (req, res) => {
 })
 //post request to check date is avaialble or not if not then add date and slots
 router.post("/checkdate", async (req, res) => {
-  const { date } = req.body;
+  const { date,type } = req.body;
   try {
     
     const data = await Slot.findOne({ date: date });
     if (data) {
       //reduce slots by 1 slot 
-      const newslots = data.slots - 1;
+      const newslots = data.slots - type;
       // eslint-disable-next-line no-unused-vars
       const update = await Slot.findOneAndUpdate(
         { date},

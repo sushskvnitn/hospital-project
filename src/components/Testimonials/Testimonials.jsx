@@ -42,8 +42,10 @@ const Testimonials = () => {
 
         <div className="row text-center  d-flex justify-content-center flex-wrap mx-3">
           {
-            revi.slice(0,4).map((item) => {
-              return (
+            // eslint-disable-next-line array-callback-return
+            revi.slice(0,20).map((item) => {
+              if(item.view===true)
+                return (
                 <Card
                   key={item._id}
                   name={item.name}

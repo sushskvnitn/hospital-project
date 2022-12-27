@@ -26,7 +26,6 @@ const DoctorSchema = new mongoose.Schema({
 });
 
 const GallerySchema = new mongoose.Schema({
-     
       photo: {
             type: String,
             required: true,
@@ -49,7 +48,6 @@ const GallerySchema = new mongoose.Schema({
 });
 
 const ReviewSchema = new mongoose.Schema({
-     
       occupation:
       {
             type: String,
@@ -66,7 +64,11 @@ const ReviewSchema = new mongoose.Schema({
       rating: {
             type: Number ,
             required: true,
-      }
+      },
+      view: {
+            type: Boolean,
+            default: false,
+      },
 });
 
 const TickerSchema = new mongoose.Schema({

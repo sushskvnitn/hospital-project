@@ -12,6 +12,7 @@ const Booking = () => {
     phone: "",
     date: "",
     doctor: "",
+    type:""
   });
   const [isverfied, setisverfied] = useState(false);
   
@@ -29,6 +30,7 @@ const Booking = () => {
       phone: "",
       date: "",
       doctor: "",
+      type:""
     });
     setisverfied(false);
   };
@@ -57,6 +59,7 @@ const Booking = () => {
     doc.text("Date: " + connect.date, 20, 90);
     doc.text("Doctor: " + connect.doctor, 20, 98);
     doc.text("Token number : " + (20 - slots), 20, 106);
+    doc.text("Type of Patient :"+ connect.type,20,114)
     doc.setFontSize(12);
     doc.text("Thank you for booking an appointment with us.", 20, 112);
     doc.setFillColor(255, 0, 0);
@@ -94,8 +97,8 @@ const Booking = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     // eslint-disable-next-line no-unused-vars
-    const { name, lname, address, email, phone, date, doctor } = connect;
-    if (!name || !lname || !address || !email || !phone || !date || !doctor) {
+    const { name, lname, address, email, phone, date, doctor, type } = connect;
+    if (!name || !lname || !address || !email || !phone || !date || !doctor || !type) {
       alert("please fill the data");
     } else {
       try {
@@ -106,6 +109,7 @@ const Booking = () => {
           },
           body: JSON.stringify({
             date: date,
+            type: type
           }),
         });
         const data = await res.json();
@@ -243,6 +247,20 @@ const Booking = () => {
                       <option value="DR-ABC">DR ABC </option>
                       <option value="DR-EFG">DR EFG </option>
                       <option value="DR-MNO">DR MNO </option>
+                    </select>
+                  </div>
+                  <div className="form-group col-sm-6 flex-column d-flex">
+                    <br />
+                    <select
+                      className="form-select my-1"
+                      aria-label="Default select example"
+                      name="type"
+                      value={connect.type}
+                      onChange={handleinputs}
+                    >
+                      <option defaultValue>Type of Patient </option>
+                      <option value="1">old </option>
+                      <option value="2">New</option>
                     </select>
                   </div>
                 </div>
