@@ -22,7 +22,7 @@ const contact = () => {
                   <br/> 502,shreeyash,95 East High court Road ,Ramdaspeth <br /> nagpur -440010 </p>
                 <h5 className="text-white font-weight-light mb-3 mt-4">CALL US</h5>
                 <p className="text-white op-7">
-                  <br/> 9511718948 </p>
+                  <br/>+91 9511718948 </p>
                 
               </div>
             </div>
