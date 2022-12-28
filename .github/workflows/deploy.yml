@@ -18,5 +18,4 @@ jobs:
           script_stop: true
           script: |
             cd app
-            chmod 755 script.sh
             bash script.sh
