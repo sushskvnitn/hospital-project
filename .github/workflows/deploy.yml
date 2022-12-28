@@ -1,0 +1,29 @@
+name: Deploying to the Server
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Update the source code
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script_stop: true
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            whoami
+            cd app
+            git pull origin main
+            if git diff --name-only HEAD^ HEAD | grep -q package.json; then
+              npm install
+            fi
+            pm2 restart app
+            pm2 restart api
