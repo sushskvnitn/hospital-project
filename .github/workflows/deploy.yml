@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Update the source code
-        uses: appleboy/ssh-action@v0.1.6
+        uses: garygrossgarten/github-action-ssh@release
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          script_stop: true
-          script: |
+          command: |
             exec bash \-l
             cd app
             git pull origin main
