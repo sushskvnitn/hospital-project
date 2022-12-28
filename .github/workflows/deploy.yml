@@ -10,15 +10,19 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Update the source code
-        uses: garygrossgarten/github-action-ssh@release
+        uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          command: |
+          script_stop: true
+          script: |
             exec bash \-l
-            cd app
+            whoami
+            ls && cd app
             git pull origin main
             if git diff --name-only HEAD^ HEAD | grep -q package.json; then
               npm install
             fi
+            pm2 logs api
+            pm2 logs app
