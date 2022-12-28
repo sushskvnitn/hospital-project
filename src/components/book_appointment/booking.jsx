@@ -284,7 +284,7 @@ const Booking = () => {
 
                 <div className="row justify-content-end">
                   <ReCAPTCHA
-                  sitekey="6Lflip0jAAAAAI6YSJttala0yKIYmwRLhd8IQlW6" // use this key for production 
+                  sitekey="6LcSFrMjAAAAALrdXHSHyAQ9JmR9-dCoKmnOiAKr" // use this key for production 
                    //   sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" //use this for local host 
                     onChange={onChange}
                   />
