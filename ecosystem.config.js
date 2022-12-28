@@ -9,5 +9,12 @@ module.exports = {
 			max_restart: 10,
 			time: true,
 		},
+		{
+			name: "app",
+			cwd: "~/app",
+			watch: true,
+			max_restart: 10,
+			time: true,
+		},
 	],
 };
