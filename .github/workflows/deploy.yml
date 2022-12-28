@@ -19,4 +19,7 @@ jobs:
           script: |
             exec bash \-l
             cd app
-            bash script.sh
+            git pull origin main
+            if git diff --name-only HEAD^ HEAD | grep -q package.json; then
+              npm install
+            fi
