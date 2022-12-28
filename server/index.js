@@ -22,7 +22,7 @@ app.post("/sendmessage", (req, res) => {
 		email: process.env.EMAIL,
 		name: "Sanjeevan Advanced Rheumatology CARE",
 	};
-	const receiver = {email: "4kstatus.ssk@gmail.com"};
+	const receiver = {email: "sarc.rheumatology@gmail.com"};
 		TranEmailApi.sendTransacEmail({
 		sender,
 		to: receiver,
