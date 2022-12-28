@@ -25,5 +25,5 @@ jobs:
             if git diff --name-only HEAD^ HEAD | grep -q package.json; then
               npm install
             fi
-            pm2 logs api
-            pm2 logs app
+            pm2 restart app
+            pm2 restart api
