@@ -47,7 +47,7 @@ Post Doctoral Fellow (CMC Vellore) <br /> </span>
               
             </div>
            <div className="sec-title marn-top">
-                            <span className="title marn-top">Our vision for future</span>
+                            <span className="title marn-top">Our vision</span>
                             <h2>We want to lead in Rheumatology </h2>
                         </div>
           <div className="text">
