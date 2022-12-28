@@ -17,5 +17,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script_stop: true
           script: |
+            exec bash \-l
             cd app
             bash script.sh
