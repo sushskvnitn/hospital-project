@@ -48,7 +48,7 @@ etc "
             <ServiceCards
               icon="https://img.icons8.com/external-others-pike-picture/50/null/external-Radiology-radiology-others-pike-picture-3.png"
               title="Radiology"
-              description="Basic radiology as required for rheumatological illnesses"
+              description="Basic radiology that is required for rheumatology"
               pointdescription=""
             />
             <ServiceCards
@@ -60,7 +60,7 @@ etc "
             <ServiceCards
               icon="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/68/null/external-medical-care-pharmacy-smashingstocks-mixed-smashing-stocks.png"
               title="Day care facility"
-              description="A facility provided for the purpose of intravenous infusions under supervision. Observations following outpatient procedures. "
+              description="A facility provided for the purpose of intravenous infusions under supervision. Observations following outpatient procedures.                Please note that we currently do NOT host an inpatient facility at our clinic, however if a need for admission is required, it can be faciltated under a choice of renowned hospitals in Nagour "
               pointdescription=""
             />
              
