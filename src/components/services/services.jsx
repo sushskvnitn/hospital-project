@@ -16,9 +16,7 @@ const Services = () => {
             <div className="col-md-12">
               <div className="site-heading text-center">
                 <h4>
-                  SARC is a Advanced Rheumatology Centre with all specialities
-                  and super specialities under one roof performing entire range
-                  of diagnostic, therapeutic and interventional procedures
+                  SARC is an advanced Rheumatology Centre with all rheumatology related services under one roof
                 </h4>
               </div>
             </div>
