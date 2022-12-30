@@ -14,12 +14,11 @@ const about = () => {
                     <div className="inner-column">
                         <div className="sec-title">
                             <span className="title">About our Hospital</span>
-                            <h2> Medicines cure diseases, but only doctors can cure patients </h2>
+                            <h2> Inspired by the past, aspiring for a great future </h2>
                         </div>
-                        <div className="text">Starting on the first working day of year 2023, this new venture Sanjeevan Advanced Rheumatology Centre inherits it’s spirit from our beloved Sanjeevan hospital,
-                         Latur that has tried it’s best to cater to the healthcare needs of not just the town of Latur, but the entire region of Marathwada and north-east Karnataka for last 3 decades. </div>
+                        <div className="text">Starting on the first working day of year 2023, this new venture Sanjeevan Advanced Rheumatology Centre inherits it’s spirit from our beloved Sanjeevan hospital (Latur) that has tried it’s best to cater to the healthcare needs of not just the town of Latur, but the entire region of Marathwada and north-east Karnataka for last 3 decades. </div>
                       <div className="text">
-                      Keeping our principle of providing a compassionate care to the needy, we also aim to be a full-fledged rheumatology centre that should be capable of providing all-round rheumatology and immunology related services to the Nagpur and greater central India region.  </div>
+                      Keeping our principle of providing a compassionate care to the needy in our hearts and minds, we also aim to be a full-fledged rheumatology centre that should be capable of providing all-round rheumatology and immunology services to the Nagpur and to the greater central India region.  </div>
                       <div className="text"> 
  To achieve this aim, we believe in collaborating with national and international masters in the field and to enhance the knowledge through collaborative clinical 
  research giving as much importance as we give to attaining top quality patient care. Afterall, the most effective way by which a sincere doctor can help his/ her own patients is by achieving the cutting edge knowledge about the disease and it’s management ! </div>
@@ -58,7 +57,7 @@ Post Doctoral Fellow (CMC Vellore) <br /> </span>
           No one from this region should need to travel elsewhere for
            management of these diseases !</div>
                <div className="text">
-In the end, I would say keep visiting our website and Stay updated.
+In the end, I would say it's with your support that we can walk a journey of a healthy future.
               </div>
         </div>
     </section>
