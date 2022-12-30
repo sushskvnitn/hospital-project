@@ -11,14 +11,13 @@ const Conditions = () => {
       </h1>
       <div className=" mx-4 ">
         <h4 className="text-center mt-4">
-          Summary of the clinical experience in Rheumatology
+          
         </h4>
         <h5 className="text-center">
-          A broad summary of experience (although not an extensive one) gained
-          in Rheumatology is as given below
+          A broad category wise summary of conditions that are treated by a Rheumatologist is provided below
         </h5>
         <br />
-        <h3 className="blue_color">Diseases :</h3> <br /> 
+        <h3 className="blue_color">Categories of diseases </h3> <br /> 
         <div className="text-end">
           <mark style={{
             color: "#043d78",
@@ -32,7 +31,7 @@ const Conditions = () => {
           <Diseasecard
             to="card-2"
             img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQar1sILaTb1XzU4WAmvxNB6NOPn6qdNrYww&usqp=CAU"
-            link="https://en.wikipedia.org/wiki/Vasculitis"
+            link=""
             backheader="These diseases include - "
             backdescription="     Giant cell arteritis (GCA), 
     • Takayasu arteritis (Tak), 
@@ -52,7 +51,7 @@ const Conditions = () => {
           <Diseasecard
             to="card-6"
             img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsjd8zzlzQhGEYQuhpM-YMAdsZv2JG5Hh9gT6DUxf-w_Stk-B-D6CCARw00UXuQj4KX9U&usqp=CAU"
-            link="https://en.wikipedia.org/wiki/Autoimmune_disease"
+            link=""
             forroute="card-6"
             backheader="These diseases include - "
             backdescription="
@@ -72,7 +71,7 @@ const Conditions = () => {
           <Diseasecard
             to="card-8"
             img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvggBk1jMAVCWh0NdTm84-k2pJr7W-aKZqvg&usqp=CAU"
-            link="https://en.wikipedia.org/wiki/Rheumatism"
+            link=""
             forroute="card-8"
             disease="Pregnancy and Rheumatology"
             backheader="Common diseases for which a rheumatologist gets referral include –"
@@ -87,16 +86,15 @@ const Conditions = () => {
            <Diseasecard
             to="card-1"
             img="https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/09/rheumatoid-arthritis-swelling-deformity-bunion-nodules-uveitis-inflammation-body6.jpg?w=1575"
-            link="https://en.wikipedia.org/wiki/Arthritis"
+            link=""
             backheader="These conditions include the following (not an exhaustive list) –"
             backdescription="   
               Rheumatoid arthritis, 
-             • Spndyloarthritis 
-        ◦ Ankylosing spondylitis, 
-        ◦ psoriatic arthritis, 
-        ◦ Enteropathic arthritis, 
-        ◦ reactive arthritis etc.
-        "
+             • Spndyloarthritis, 
+             • Ankylosing spondylitis, 
+             ◦   psoriatic arthritis, 
+             ◦   Enteropathic arthritis, 
+             ◦   reactive arthritis "
             forroute="card-1"
             disease="Arthritids"
             description="Arthritds are diseases who’s predominant symptom is related to joints (joint pain/ swelling/ stiffness or dysfunction)."
@@ -104,7 +102,7 @@ const Conditions = () => {
           <Diseasecard
             to="card-4"
             img="https://ars.els-cdn.com/content/image/1-s2.0-S036505962100204X-gr2.jpg"
-            link="https://pubmed.ncbi.nlm.nih.gov/9217556/"
+            link=""
             forroute="card-4"
             backheader="These diseases include - "
             backdescription="
@@ -119,7 +117,7 @@ const Conditions = () => {
           <Diseasecard
             to="card-5"
             img="https://globalgenes.org/wp-content/uploads/2013/08/anemia.jpg"
-            link="https://en.wikipedia.org/wiki/Systemic_disease"
+            link=""
             forroute="card-5"
             disease="Rheumatic manifestations of systemic diseases"
             backheader="These diseases include - "
@@ -136,7 +134,7 @@ There are many other medical conditions that can mimic a rheumatic disease due t
           <Diseasecard
             to="card-7"
             img="https://www.mountsinai.org/files/MSHealth/Assets/HS/Care/Pediatrics/MSHS-Pediatrics-Rheumatology-2col-770x420.jpg"
-            link="https://en.wikipedia.org/wiki/German_Center_for_Pediatric_and_Adolescent_Rheumatology"
+            link=""
             forroute="card-7"
             disease="Paediatric rheumatology"
             backheader="These diseases include - "
@@ -152,7 +150,7 @@ There are many other medical conditions that can mimic a rheumatic disease due t
           <Diseasecard
             to="card-3"
             img="https://img.medscapestatic.com/pi/meds/ckb/50/27250tn.jpg"
-            link="https://en.wikipedia.org/wiki/Connective_tissue_disease"
+            link=""
             forroute="card-3"
             backheader="Main diseases in this category include - "
             backdescription="
