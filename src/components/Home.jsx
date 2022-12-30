@@ -37,7 +37,7 @@ const Home = () => {
         <div>
           <img
             alt="img"
-            src="https://www.carecochin.com/uploads/banners/shenoys-care-1608615395.jpg"
+            src=""
           />
         </div>
       </Carousel>
