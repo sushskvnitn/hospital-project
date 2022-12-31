@@ -28,7 +28,7 @@ const about = () => {
                     </div>
                 </div>
 
-                <div className="https://i.postimg.cc/HsRKCbq4/Sanjeevan-hospitla-Latur-2.jpg">
+                <div className="image-column col-lg-6 col-md-12 col-sm-12">
                     <div className="inner-column  fadeInLeft">
                       <div className="author-desc">
                         <h2>Sanjeevan hospital </h2>
