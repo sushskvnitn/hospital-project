@@ -14,7 +14,7 @@ const DoctorCard = (props) => {
       <div className="card" style={{height:"35rem"}}>
   <div className="bg-image hover-overlay img-hover-zoom--brightness ripple" data-mdb-ripple-color="light">
   <div className="img-hover-zoom">
-  <img alt="images " src="https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg?w=996&t=st=1670048389~exp=1670048989~hmac=a9a06ea7e58052cdc5f2c3bf201a793e59dffca753526f4962fec80b22da8a6d" className="img-fluid"/>
+  <img alt="images " src="https://i.postimg.cc/G3YybySJ/Salil-Profile-photo.jpg" className="img-fluid"/>
 </div>
    
   </div>
