@@ -4,6 +4,14 @@ const UploadImg = () => {
   const [image, setImage] = useState("");
   const [caption, setdescription] = useState("");
   const [url, setURL] = useState("");
+
+  const resetDetails = () => {
+    setgallarytitle("");
+    setImage("");
+    setdescription("");
+    setURL("");
+  }
+
   const postDetails = async () => {
     if (!url) {
       const data = new FormData();
@@ -36,6 +44,7 @@ const UploadImg = () => {
           alert("Error in uploading image");
         } else if (data.status === 200) {
           alert("image uploaded successfully");
+          resetDetails();
         }
       } else {
         alert("Error in uploading image");
@@ -57,6 +66,7 @@ const UploadImg = () => {
           alert("Error in uploading image");
         } else if (data.status === 200) {
           alert("image uploaded successfully");
+          resetDetails();
         }
       } catch (error) {
         console.log(error);
