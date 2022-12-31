@@ -14,7 +14,7 @@ const DoctorCard = (props) => {
       <div className="card" style={{height:"35rem"}}>
   <div className="bg-image hover-overlay img-hover-zoom--brightness ripple" data-mdb-ripple-color="light">
   <div className="img-hover-zoom">
-  <img alt="images " src="https://i.postimg.cc/G3YybySJ/Salil-Profile-photo.jpg" className="img-fluid"/>
+  <img alt="images " src="https://i.postimg.cc/VLZrRWSw/SARC-logo.jpg" className="img-fluid"/>
 </div>
    
   </div>
