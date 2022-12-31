@@ -37,7 +37,7 @@ const Home = () => {
         <div>
           <img
             alt="img"
-            src=""
+            src="https://i.postimg.cc/MKHLf908/Shreeyash-building.jpg"
           />
         </div>
       </Carousel>
