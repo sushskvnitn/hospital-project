@@ -28,7 +28,7 @@ of experience. Live pain free on your way to recovery.</h5>
           Has a keen interest in clinical research 
             
             • further area of interest – connective tissue diseases, vasculitis and autoinflammatory syndromes."
-          image=""
+          image="https://i.postimg.cc/G3YybySJ/Salil-Profile-photo.jpg"
           interests=""
           achievement="  Ganu SA, Mathew AJ, Nadaraj A, Jeyaseelan L, Danda D. Cotrimoxazole prophylaxis prevents major infective episodes in patients with systemic lupus erythematosus on immunosuppressants: A non-concurrent cohort study. Lupus. 2021 May;30(6):893-900. doi: 10.1177/0961203321995238. Epub 2021 Feb 24. PMID: 33626971.
           
