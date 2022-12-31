@@ -16,7 +16,7 @@ const about = () => {
                             <span className="title">About our Hospital</span>
                             <h2> Inspired by the past, aspiring for a great future </h2>
                         </div>
-                        <div className="text">Starting on the first working day of year 2023, this new venture Sanjeevan Advanced Rheumatology Centre inherits it’s spirit from our beloved Sanjeevan hospital (Latur) that has tried it’s best to cater to the healthcare needs of not just the town of Latur, but the entire region of Marathwada and north-east Karnataka for last 3 decades. </div>
+                        <div className="text">Starting on the first working day of year 2023, this new venture Sanjeevan Advanced Rheumatology Centre inherits it’s spirit from our beloved Sanjeevan hospital (Latur) that has catered to the healthcare needs of the town of Latur, and the entire region of Marathwada and north-east Karnataka for last 3 decades. </div>
                       <div className="text">
                       Keeping our principle of providing a compassionate care to the needy in our hearts and minds, we also aim to be a full-fledged rheumatology centre that should be capable of providing all-round rheumatology and immunology services to the Nagpur and to the greater central India region.  </div>
                       <div className="text"> 
@@ -28,13 +28,13 @@ const about = () => {
                     </div>
                 </div>
 
-                <div className="image-column col-lg-6 col-md-12 col-sm-12">
+                <div className="https://i.postimg.cc/HsRKCbq4/Sanjeevan-hospitla-Latur-2.jpg">
                     <div className="inner-column  fadeInLeft">
                       <div className="author-desc">
-                        <h2>Dr. SALIL A. GANU</h2>
-<span>MBBS, MD (Medicine) <br />
-DM (Rheumatology and Clinical Immunology) <br />
-Post Doctoral Fellow (CMC Vellore) <br /> </span>
+                        <h2>Sanjeevan hospital </h2>
+<span>Latur <br />
+<br />
+<br /> </span>
                       </div>
                       <div className="d-lg-none testimg"><img title="Rahul Kumar Yadav" src="https://images.unsplash.com/photo-1666214276372-24e331683e78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG9zcGl0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width="80%" className='img-fluid rounded imgtest'  alt=""/>
                      </div>
