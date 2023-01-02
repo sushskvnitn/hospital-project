@@ -23,7 +23,7 @@ of experience. Live pain free on your way to recovery.</h5>
            email=""
           experiance="Worked as a senior resident (PG) 3 years as a part of DM training at Amrita Institute of Medical Science, Kochi. 
           
-          •Worked as a senior resident (PG) for 2 years and senior registrar (non-PG) for 6 months in prestigious Christina Medical College Vellore.
+          •Worked as a senior resident (PG) for 2 years and senior registrar (non-PG) for 6 months in prestigious Christian Medical College Vellore.
             
           Has a keen interest in clinical research 
             
