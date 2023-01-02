@@ -244,9 +244,9 @@ const Booking = () => {
                       onChange={handleinputs}
                     >
                       <option defaultValue>Select Doctor </option>
-                      <option value="DR-ABC">DR ABC </option>
-                      <option value="DR-EFG">DR EFG </option>
-                      <option value="DR-MNO">DR MNO </option>
+                      <option value="DR-ABC">DR Salil A Ganu </option>
+                      <option value="DR-EFG"> Not Applicable </option>
+                      <option value="DR-MNO"> Not Applicable </option>
                     </select>
                   </div>
                   <div className="form-group col-sm-6 flex-column d-flex">
@@ -300,10 +300,8 @@ const Booking = () => {
                   </div>
                 </div>
                 <p className="text-center ">
-                  The above booking is not a confirmation. Our office staff
-                  shall call you to fix a time and date in the immediate days.
-                  Please consider coming to the clinic only once you receive the
-                  call from Sanjeevan Advanced Rheumatology CARE.
+                  The above booking Token is not a confirmation and is subject to availability of the doctor.
+                  Please note we do not ask for the online paymants for token generation.
                 </p>
               </form>
             </div>
