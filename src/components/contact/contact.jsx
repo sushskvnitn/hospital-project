@@ -6,8 +6,8 @@ const contact = () => {
     <div className="contact2 marn-top" >
       <h1 className ="text-center"  > <b> Contact us </b> </h1>
       <div className="d-flex justify-content-center" >
-        <iframe title="map" className="map d-lg-none" src="https://www.google.com/maps/place/Sanjeevan+Advanced+Rheumatology+Centre/@21.1355087,79.0691033,15z/data=!4m5!3m4!1s0x0:0xb1fe57eed6796011!8m2!3d21.1355087!4d79.0691033" width="390" height="400" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-        <iframe title="map" className="map d-none d-lg-block" src="https://www.google.com/maps/place/Sanjeevan+Advanced+Rheumatology+Centre/@21.1355087,79.0691033,15z/data=!4m5!3m4!1s0x0:0xb1fe57eed6796011!8m2!3d21.1355087!4d79.0691033" width="1500" height="500" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="map" className="map d-lg-none" src="https://goo.gl/maps/GVCHVbtcRZybv7kx7" width="390" height="400" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="map" className="map d-none d-lg-block" src="https://goo.gl/maps/GVCHVbtcRZybv7kx7" width="1500" height="500" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
   <div className="container">
     <div className="row contact-container">
