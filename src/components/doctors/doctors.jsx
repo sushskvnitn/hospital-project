@@ -37,7 +37,7 @@ of experience. Live pain free on your way to recovery.</h5>
         <div className="col-md-4">
           <DoctorCard name="Mohini Ashok Ganu" 
             subdesc="Senior visiting consultant physician with special interest in rheumatology"
-           education="MBBS, MD, Fellow of Indian College of Physician, EULAR - certificate in rheumatology "
+           education="MBBS • MD • Fellow of Indian College of Physician, EULAR - certificate in rheumatology "
            address=""
            website=""
            email=""
@@ -50,7 +50,7 @@ of experience. Live pain free on your way to recovery.</h5>
         <div className="col-md-4">  
           <DoctorCard name="Ashok Shankar Ganu "
           subdesc="Senior visiting consultant physician "
-          education="MBBS, MD"
+          education="MBBS• MD"
           address=""
           website=""
           email=""
@@ -63,7 +63,7 @@ of experience. Live pain free on your way to recovery.</h5>
          <div className="col-md-4">  
           <DoctorCard name="Devashree S. Warnekar"
           subdesc="Consultant anaesthetist"
-          education="MBBS, MD, DNB, fellowship in regional anaesthesia"
+          education="MBBS• MD• DNB, fellowship in regional anaesthesia"
           address=""
           website=""
           email=""
