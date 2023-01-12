@@ -178,13 +178,10 @@ There are many other medical conditions that can mimic a rheumatic disease due t
             >
               <i className="fas fa-scroll fs-2 m-2"></i>
               <h4>Links to educational videos</h4>
-              <p>What is Rheumatology part 1 (marathi)
-              https://youtu.be/UHvtlKdOkDI</p>
-              <p>Joint pain (marathi) 
-              https://youtu.be/ChjawRD6lsE</p>
-              <p>"https://youtu.be/2L8DaIJuP1E"</p>
-              <p>Backache (marathi)
-              https://youtu.be/vznl2Vd5Y9Q</p>
+              <p>What is Rheumatology part 1 (marathi - ninad foundation) "https://youtu.be/UHvtlKdOkDI"</p>
+              <p>Joint pain (marathi - ninad foundation) "https://youtu.be/ChjawRD6lsE"</p>
+              <p>MISC (marathi- ninad foundation) "https://youtu.be/2L8DaIJuP1E"</p>
+              <p>Backache (marathi - ninad foundation) https://youtu.be/vznl2Vd5Y9Q</p>
             </div>
           </div>
           <div className="col-md-5 col-sm-6 equal-height ">
