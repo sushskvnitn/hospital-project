@@ -182,8 +182,7 @@ There are many other medical conditions that can mimic a rheumatic disease due t
               https://youtu.be/UHvtlKdOkDI</p>
               <p>Joint pain (marathi) 
               https://youtu.be/ChjawRD6lsE</p>
-              <p>MISC (marathi)
-              https://youtu.be/2L8DaIJuP1E</p>
+              <p>"https://youtu.be/2L8DaIJuP1E"</p>
               <p>Backache (marathi)
               https://youtu.be/vznl2Vd5Y9Q</p>
             </div>
