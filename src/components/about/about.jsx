@@ -47,7 +47,7 @@ const about = () => {
             </div>
            <div className="sec-title marn-top">
                             <span className="title marn-top">Our vision</span>
-                            <h2>We want to lead in Rheumatology </h2>
+                            <h2> Rheumatology services for all </h2>
                         </div>
           <div className="text">
           To build a prime institute that is a leader in central India in rheumatology 
