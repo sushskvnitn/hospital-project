@@ -134,7 +134,7 @@ There are many other medical conditions that can mimic a rheumatic disease due t
           <Diseasecard
             to="card-7"
             img="https://www.mountsinai.org/files/MSHealth/Assets/HS/Care/Pediatrics/MSHS-Pediatrics-Rheumatology-2col-770x420.jpg"
-            link=""
+            link="https://www.youtube.com/watch?v=2L8DaIJuP1E"
             forroute="card-7"
             disease="Paediatric rheumatology"
             backheader="These diseases include - "
