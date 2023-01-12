@@ -86,7 +86,7 @@ const Conditions = () => {
            <Diseasecard
             to="card-1"
             img="https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/09/rheumatoid-arthritis-swelling-deformity-bunion-nodules-uveitis-inflammation-body6.jpg?w=1575"
-            link=""
+            link="https://www.youtube.com/watch?v=vznl2Vd5Y9Q"
             backheader="These conditions include the following (not an exhaustive list) –"
             backdescription="   
               Rheumatoid arthritis, 
