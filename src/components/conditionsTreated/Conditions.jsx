@@ -177,11 +177,15 @@ There are many other medical conditions that can mimic a rheumatic disease due t
               style={{ height: "18rem" }}
             >
               <i className="fas fa-scroll fs-2 m-2"></i>
-              <h4>Procedures</h4>
-              <p>Intra-articular injections,Lip biopsy</p>
-              <p>Nerve-muscle Biopsy</p>
-              <p>Trigger finger injections</p>
-              <p>Carpal Tunnel injections</p>
+              <h4>Links to educational videos</h4>
+              <p>What is Rheumatology part 1 (marathi)
+              https://youtu.be/UHvtlKdOkDI</p>
+              <p>Joint pain (marathi) 
+              https://youtu.be/ChjawRD6lsE</p>
+              <p>MISC 
+              https://youtu.be/2L8DaIJuP1E</p>
+              <p>Backache 
+              https://youtu.be/vznl2Vd5Y9Q</p>
             </div>
           </div>
           <div className="col-md-5 col-sm-6 equal-height ">
