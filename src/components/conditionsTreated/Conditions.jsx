@@ -144,7 +144,7 @@ There are many other medical conditions that can mimic a rheumatic disease due t
     • Juvenile dermatmyositis
     • Chronic recurrent multifocal osteomyelitis/ chronic nonbacterial osteomyelitis
             "
-            description="These diseases do occur in children. Not just that, they are not even rare. In fact, children unlike in adults have a developing (not yet completely developed) immune system because of which many of these diseases are even more severe if they start in childhood. Severe nature of these problems have their unique unintended effects on growth and development in children "
+            description="These diseases do occur in children and they are not even rare. In fact, children unlike in adults have a developing (not yet completely developed) immune system because of which many of these diseases are even more severe if they start in childhood. Severe nature of these problems have their unique unintended effects on growth and development in children "
           />
           <br />
           <Diseasecard
